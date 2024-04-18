@@ -14,7 +14,7 @@
   background-color: #4f5ea3;
   display: flex;
   align-items: center;
-  height: 6vw;
+  height: 8vw;
   font-size: 1.4vw;
 }
 
@@ -22,7 +22,7 @@
   background-image: url(../img/logo.png);
   background-size: cover;
   background-position: center;
-  height: 6vw;
+  height: 8vw;
   width: 10%;
 }
 
@@ -71,11 +71,10 @@
 }
 
 /* main home section */
-
 #home::before {
   content: "";
   position: absolute;
-  height: 72vw;
+  height: 46.32vw;
   background: url("../img/bg.jpg") no-repeat center center/cover;
   width: 100%;
   z-index: -1;
@@ -141,6 +140,7 @@
   margin: 6vw;
   position: relative;
   bottom: 2vw;
+  border-radius: 8px;
 }
 .arrivals-text {
   display: flex;
@@ -182,7 +182,7 @@
   width: 22vw;
   height: 2.2vw;
   position: relative;
-  bottom: 0.0vw;
+  bottom: 0vw;
   /* left: 0.2vw; */
   background-color: rgb(238, 217, 217);
   font-size: 1vw;
@@ -218,54 +218,57 @@
   z-index: -1;
   opacity: 0.9;
 }
-#home-2{
-  margin-top:-5vw ;
+#home-2 {
+  height: 44vw;
+  margin-top: -10vw;
 }
-.home-2-op{
+.home-2-op {
   display: grid;
   grid-template-columns: 35vw 35vw;
-  grid-template-rows: 12vw 12vw ;
+  grid-template-rows: 12vw 12vw;
   grid-gap: 5vw 10vw;
   margin: 8vw;
+  position: relative;
+  top: 4vw;
 }
-.options{
+.options {
   background-color: yellow;
   border-radius: 10px;
 }
-.target{
+.target {
   position: relative;
   font-size: 2vw;
   left: 6vw;
   top: 2vw;
 }
-.target i{
+.target i {
   color: red;
 }
-.target2{
+.target2 {
   position: relative;
   font-size: 1.1vw;
   color: black;
   left: 15vw;
   top: 4vw;
 }
-.target2 a{
-    text-decoration: none;
-    color: black;
+.target2 a {
+  text-decoration: none;
+  color: black;
 }
-.target2 a:hover{
-    text-decoration: underline;
-    color: rgb(63, 62, 62);
+.target2 a:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
 }
-.services{
+.services {
   position: relative;
   font-size: 2vw;
   left: 8vw;
   top: 2vw;
 }
-.services i{
+.services i {
   color: red;
 }
-.services2{
+.services2 {
   position: relative;
   font-size: 1.1vw;
   color: black;
@@ -273,48 +276,48 @@
   top: 4vw;
   width: 50%;
 }
-.services2 a{
-    text-decoration: none;
-    color: black;
+.services2 a {
+  text-decoration: none;
+  color: black;
 }
-.services2 a:hover{
-    text-decoration: underline;
-    color: rgb(63, 62, 62);
+.services2 a:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
 }
-.resturent{
+.restaurant {
   position: relative;
   font-size: 2vw;
   left: 6.7vw;
   top: 2vw;
 }
-.resturent i{
+.restaurant i {
   color: red;
 }
-.resturent2{
+.restaurant2 {
   position: relative;
   font-size: 1.1vw;
   color: black;
   left: 12vw;
   top: 4vw;
 }
-.resturent2 a{
-    text-decoration: none;
-    color: black;
+.restaurant2 a {
+  text-decoration: none;
+  color: black;
 }
-.resturent2 a:hover{
-    text-decoration: underline;
-    color: rgb(63, 62, 62);
+.restaurant2 a:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
 }
-.shopping{
+.shopping {
   position: relative;
   font-size: 2vw;
   left: 7vw;
   top: 2vw;
 }
-.shopping i{
+.shopping i {
   color: red;
 }
-.shopping2{
+.shopping2 {
   width: 50%;
   position: relative;
   font-size: 1.1vw;
@@ -322,73 +325,152 @@
   left: 15vw;
   top: 4vw;
 }
-.shopping2 a{
-    text-decoration: none;
-    color: black;
+.shopping2 a {
+  text-decoration: none;
+  color: black;
 }
-.shopping2 a:hover{
-    text-decoration: underline;
-    color: rgb(63, 62, 62);
+.shopping2 a:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
 }
 
-.expert{
+.expert {
   display: inline-block;
   border-radius: 20%;
   font-size: 2vw;
   background-color: rgb(233, 98, 98);
   position: relative;
   left: 72vw;
-  bottom: 3vw;
+  bottom: 5vw;
+  height: 5vw;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.expert:hover{
+.expert:hover {
   background-color: #d94d4d;
   cursor: pointer;
 }
 
 /* footer */
-footer{
+footer {
   height: 15vw;
   background-color: #4f5ea3;
   font-size: 1.4vw;
 }
-.footer-1st{
+.footer-1st {
   display: flex;
   align-items: center;
   border-bottom: 2px solid white;
 }
-.footer-logo{
+.footer-logo {
   background-image: url(../img/logo.png);
   background-size: cover;
   background-position: center;
   height: 4vw;
   width: 7%;
 }
-.title{
+.title {
   font-size: 1.3vw;
   font-weight: bold;
 }
-.footer-2nd{
+.footer-2nd {
   height: 7vw;
   border-bottom: 2px solid red;
 }
-.footer2d-info{
+.footer2d-info {
   display: grid;
-  grid-template-columns:auto auto auto;
+  grid-template-columns: auto auto auto;
 }
-.info{
+.info {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-left: 2px solid white;
 }
-.links{
+.links {
   display: flex;
 }
-.links i{
+.links i {
   padding-left: 1vw;
 }
-.footer-last{
+.footer-last {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 899px) {
+  .nav2 {
+    height: 12vw;
+    font-size: 1.4vw;
+  }
+  .logo {
+    height: 12vw;
+    width: 10%;
+  }
+  .home-text {
+    position: relative;
+    top: 10vw;
+  }
+  .home-text i {
+    font-size: 1.4vw;
+  }
+  .arrow-right {
+    position: relative;
+    top: 4vw;
+  }
+  .arrow-left {
+    position: relative;
+    top: 4vw;
+  }
+  #home {
+    height: 69vw;
+  }
+  #home::before {
+    height: 69vw;
+  }
+  .arrivals {
+    position: relative;
+    top: 16vw;
+  }
+  #home-2 {
+    height: 60vw;
+  }
+  .home-2-op {
+    position: relative;
+    top: 13vw;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 15vw 15vw;
+    grid-gap: 8vw 10vw;
+  }
+  #home-2::before {
+    height: 66vw;
+  }
+  .expert {
+    bottom: 7 vw;
+    height: 4vw;
+    width: 26%;
+    font-size: 2vw;
+  }
+  footer {
+    height: 30vw;
+  }
+  .footer-1st {
+    height: 8vw;
+  }
+  .title {
+    font-size: 2vw;
+  }
+  .footer-logo {
+    height: 7vw;
+    width: 13%;
+  }
+  .footer-2nd {
+    height: 13vw;
+    font-size: 2.3vw;
+  }
+  .footer-last {
+    font-size: 2.1vw;
+  }
 }
