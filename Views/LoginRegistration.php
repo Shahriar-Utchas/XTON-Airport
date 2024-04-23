@@ -16,6 +16,9 @@ session_start();
   </style>
 </head>
 <body>
+  <div class="background_image">
+    
+  </div>
   <div class="wrapper">
     <h2>Login</h2>
     <form method="post" action="../Controllers/logCheckController.php">
@@ -46,7 +49,6 @@ session_start();
       }
     ?>
   </div>
-
   <div class="wrapper2 register-form hidden">
     <h2>Register Now</h2>
     <form method="POST" action="../Controllers/registrationController.php">
