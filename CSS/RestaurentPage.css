@@ -187,7 +187,7 @@
 
 #home::before {
   content: "";
-  background: url("../img/Restaurent_Pic/R01.jpg") no-repeat center center/cover;
+  background: url("../img/Restaurent_Pic/R02.jpg") no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -198,60 +198,36 @@
 }
 
 .bigbox {
-  height: 46.875vw;
   background: url("../img/Restaurent_Pic/R02.jpg") no-repeat center center/cover;
   position: relative;
-  /* top: 0;
-    left: 0;*/
-  height: 100%;
   width: 100%;
-  z-index: -1;
+
   opacity: 0.9;
 }
 
+
 #home h3 {
-  color: white;
+  color: black;
   text-align: center;
   font-family: "Bree Serif", serif;
+  position: relative;
+  bottom: 4vw;
 }
 
 #home h1 {
   font-size: 2.8rem;
-  color: white;
+  color: black;
   text-align: center;
   font-family: "Bree Serif", serif;
   font-style: normal;
-}
-
-#terminal {
-  color: rgb(10, 1, 1);
-  background-color: #b2aee8;
-  padding: 2.03vw;
-  margin: -0.13vw;
-  display: flex;
-}
-
-#terminal .terminalbox {
-  font-family: "Bree Serif", serif;
-  padding-top: 0vw;
-  padding-bottom: 5.979vw;
-  padding-right: 75.5vw;
-}
-
-#terminal .terminalbox2 {
-  font-family: "Bree Serif", serif;
-  bottom: 95vw;
-  padding-top: 0vw;
-  padding-bottom: 5.979vw;
-}
-
-#terminal .terminalbox1 {
-  padding: -0.52vw;
+  position: relative;
+  bottom: 4vw;
 }
 
 #shop {
   margin: -2.083vw;
   display: flex;
+  width: 100%;
 }
 
 #shop .box {
@@ -260,13 +236,33 @@
   margin: 4.896vw;
   border-radius: 0.781vw;
   background-color: rgb(240, 233, 233);
+  width: 100%;
 }
 
 #shop .box img {
   display: block;
   margin: auto;
-  height: 6.77vw;
+  width: 140%;
   height: 8.854vw;
+  position: relative;
+  right: 2vw;
+}
+#shop .box2 {
+  border: 0.104vw solid rgb(228, 152, 152);
+  padding: 2.865vw;
+  margin: 4.896vw;
+  border-radius: 0.781vw;
+  background-color: rgb(240, 233, 233);
+}
+
+#shop .box2 img {
+  display: block;
+  margin: auto;
+  /* height: 6.77vw; */
+  width: 120%;
+  height: 8.854vw;
+  position: relative;
+  right: 1vw;
 }
 
 /* Utility Class */
@@ -285,22 +281,15 @@
   border-radius: 0.52vw;
   cursor: pointer;
   font-family: "Bree Serif", serif;
+  position: relative;
+  left: 2vw;
 }
 
-.btn2 {
-  padding: 0.52vw 1.31vw;
-  border: 0.104vw solid white;
-  background-color: rgb(199, 61, 61);
-  color: white;
-  font-size: 1.45rem;
-  border-radius: 0.52vw;
-  cursor: pointer;
-  font-family: "Bree Serif", serif;
-}
 /* footer */
 footer {
   background-color: #4f5ea3;
   font-size: 1.4vw;
+  margin-top: 2vw;
 }
 .footer-1st {
   display: flex;
@@ -329,6 +318,7 @@ footer {
 .info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   border-left: 2px solid white;
 }
@@ -336,6 +326,7 @@ footer {
   display: flex;
 }
 .links i {
+  /* color: red; */
   padding-left: 1vw;
 }
 .footer-last {
@@ -349,7 +340,7 @@ footer {
   width: 80%;
   margin-left: 10vw;
   position: relative;
-  bottom: 2vw;
+  bottom: 15vw;
   border-radius: 12px;
 }
 .select-terminal {
@@ -362,6 +353,7 @@ footer {
   font-size: 1.8vw;
   position: relative;
   left: 57vw;
+  /* cursor: pointer; */
 }
 
 .terminal-op button {
@@ -373,4 +365,24 @@ footer {
 .select-category button {
   margin-left: 30px;
   font-size: 1.2vw;
+}
+.shop-selection{
+  position: relative;
+  bottom: 10vw;
+}
+.shop-selection2{
+  position: relative;
+  bottom: 5vw;
+}
+.box a{
+  text-decoration: none;
+}
+.box a:hover{
+  text-decoration:underline ;
+}
+.box2 a{
+  text-decoration: none;
+}
+.box2 a:hover{
+  text-decoration:underline ;
 }
