@@ -48,65 +48,66 @@
         
         <div class="select-terminal">
             Select a terminal
-            <button>Reset</button>
+            <button class="btn">Reset</button>
         </div>
         <div class="terminal-op">
-            <button>T1</button>
-            <button>T2</button>
-            <button>T3</button>
-            <button>T4</button>
+            <button class="btn">T1</button>
+            <button class="btn">T2</button>
+            <button class="btn">T3</button>
+            <button class="btn">T4</button>
         </div>
         <div class="select-terminal">
         Select a Catagory
         </div>
         <div class="select-category">
-            <button>Family Favourits</button>
-            <button>Casual Dining</button>
-            <button>Coffee House & Cafe</button>
-            <button>International Cusine</button>
+            <button class="btn">Family Favourits</button>
+            <button class="btn">Casual Dining</button>
+            <button class="btn">Coffee House & Cafe</button>
+            <button class="btn">International Cusine</button>
         </div>
     </section>
     
 
-        <section class="shop selection">
+        <section class="shop-selection">
         <h1 class="h-primary"></h1>
         <div id="shop">
             <div class="box">
                 <img src="../img/Restaurent_Pic/Bigsmoke.jpeg" alt="">
-                <button class="btn">View Details</button>
+                <a href="https://www.big-smoke.co.uk/" target="_blank" class="btn">View Details</a>
+            
             </div>
             <div class="box">
                 <img src="../img/Restaurent_Pic/Black Sheep Coffee.jpeg" alt="">
-                <button class="btn">View Details</button>
+                <a href="https://leavetheherdbehind.com/" target="_blank" class="btn">View Details</a>
             </div>
             <div class="box">
                 <img src="../img/Restaurent_Pic/Cavier House.jpg" alt="">
-                <button class="btn">View Details</button>
+                <a href="https://www.caviarhouse-prunier.com/" target="_blank" class="btn">View Details</a>
             </div>
             <div class="box">
                 <img src="../img/Restaurent_Pic/Girraffe.png" alt="">
-                <button class="btn">View Details</button>
+                <a href="https://www.emiratesleisureretail.com/brands/giraffe-world-kitchen/" target="_blank" class="btn">View Details</a>
         </div>
         </section>
 
-        <section class="shop selection">
+        <section class="shop-selection2">
         <h1 class="h-primary"></h1>
         <div id="shop">
-            <div class="box">
-                <img src="../img/Restaurent_Pic/Bigsmoke.jpeg" alt="">
-                <button class="btn">View Details</button>
+            <div class="box2">
+                <img src="../img/Restaurent_Pic/Cafe Nero.jpg" alt="">
+                <a href="https://www.caffenero.com/" target="_blank" class="btn">View Details</a>
             </div>
-            <div class="box">
-                <img src="../img/Restaurent_Pic/Black Sheep Coffee.jpeg" alt="">
-                <button class="btn">View Details</button>
+            <div class="box2">
+                <img src="../img/Restaurent_Pic/StarBucks.jpg" alt="">
+                <a href="https://www.starbucks.com/" target="_blank" class="btn">View Details</a>
             </div>
-            <div class="box">
-                <img src="../img/Restaurent_Pic/Cavier House.jpg" alt="">
-                <button class="btn">View Details</button>
+            <div class="box2">
+                <img src="../img/Restaurent_Pic/Ocean.jpg" alt="">
+                <a href="https://www.rwsentosa.com/en/restaurants/signature-restaurants/ocean-restaurant" target="_blank" class="btn">View Details</a>>
             </div>
-            <div class="box">
-                <img src="../img/Restaurent_Pic/Girraffe.png" alt="">
-                <button class="btn">View Details</button>
+            <div class="box2">
+                <img src="../img/Restaurent_Pic/QueensArms.jpg" alt="">
+                <a href="https://www.thequeensarmskensington.co.uk/" target="_blank" class="btn">View Details</a>
         </div>
         </section>
     </section>
