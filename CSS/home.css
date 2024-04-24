@@ -14,7 +14,7 @@
   background-color: #4f5ea3;
   display: flex;
   align-items: center;
-  height: 8vw;
+  height: 6vw;
   font-size: 1.4vw;
 }
 
@@ -22,13 +22,13 @@
   background-image: url(../img/logo.png);
   background-size: cover;
   background-position: center;
-  height: 8vw;
+  height: 6vw;
   width: 10%;
 }
 
 .nav2-content p {
   display: inline;
-  margin-left: 5vw;
+  margin-left: 6vw;
 }
 .nav2 a {
   text-decoration: none;
@@ -38,6 +38,7 @@
   text-decoration: underline;
   color: rgb(167, 204, 239);
 }
+
 .nav2-searchBar {
   color: white;
   display: flex;
@@ -68,12 +69,6 @@
 .nav2-login i {
   font-size: 2vw;
 }
-.nav2-user {
-  margin-left: 5vw;
-}
-.nav2-user i {
-  font-size: 2vw;
-}
 
 /* main home section */
 #home::before {
@@ -84,6 +79,21 @@
   width: 100%;
   z-index: -1;
   opacity: 0.9;
+  animation: chngImg 15s linear  infinite;
+}
+@keyframes chngImg{
+  0%{
+    background: url("../img/bg.jpg") no-repeat center center/cover;
+  }
+  25%{
+    background: url("../img/bg3.jpg") no-repeat center center/cover;
+  }
+  75%{
+    background: url("../img/bg4.jpg") no-repeat center center/cover;
+  }
+  100%{
+    background: url("../img/bg5.jpg") no-repeat center center/cover;
+  }
 }
 .home-text p {
   font-size: 6vw;
@@ -125,6 +135,8 @@
   position: relative;
   left: 92vw;
   top: 2vw;
+  visibility: hidden;
+
 }
 .arrow-right i:hover {
   color: rgb(63, 62, 62);
@@ -135,6 +147,8 @@
   position: relative;
   left: 0.5vw;
   bottom: 2vw;
+  visibility: hidden;
+
 }
 .arrow-left i:hover {
   color: rgb(63, 62, 62);
