@@ -227,6 +227,8 @@
 #shop {
   margin: -2.083vw;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
 }
 
@@ -236,7 +238,6 @@
   margin: 4.896vw;
   border-radius: 0.781vw;
   background-color: rgb(240, 233, 233);
-  width: 100%;
 }
 
 #shop .box img {
@@ -246,30 +247,6 @@
   height: 8.854vw;
   position: relative;
   right: 2vw;
-}
-#shop .box2 {
-  border: 0.104vw solid rgb(228, 152, 152);
-  padding: 2.865vw;
-  margin: 4.896vw;
-  border-radius: 0.781vw;
-  background-color: rgb(240, 233, 233);
-}
-
-#shop .box2 img {
-  display: block;
-  margin: auto;
-  /* height: 6.77vw; */
-  width: 120%;
-  height: 8.854vw;
-  position: relative;
-  right: 1vw;
-}
-
-/* Utility Class */
-.h-primary {
-  font-size: 1.8rem;
-  padding: 0.781vw;
-  font-family: "Bree Serif", serif;
 }
 
 .btn {
@@ -340,7 +317,7 @@ footer {
   width: 80%;
   margin-left: 10vw;
   position: relative;
-  bottom: 15vw;
+  bottom: 13.5vw;
   border-radius: 12px;
 }
 .select-terminal {
@@ -386,3 +363,14 @@ footer {
 .box2 a:hover{
   text-decoration:underline ;
 }
+.lunch{
+  display: none;
+}
+.coffee{
+  display: none;
+}
+.interCousine{
+  display: none;
+}
+
+
