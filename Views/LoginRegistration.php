@@ -9,6 +9,7 @@ session_start();
   <title>Login Page</title>
   <link rel="stylesheet" href="../CSS/LoginRegistration.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <style>
     .hidden {
       display: none;
@@ -40,11 +41,15 @@ session_start();
     
     <?php 
       if(!empty($_SESSION['mess'])) {
-        echo $_SESSION['mess'];
+        ?>
+         <script>swal("Error", "ID/Password Incorrect", "error");</script>
+        <?php
         unset($_SESSION['mess']);
       }
       if(!empty($_SESSION['reg'])) {
-        echo $_SESSION['reg'];
+        ?>
+        <script>swal("Error", "Please, fIll the box correctly.", "error");</script>
+       <?php
         unset($_SESSION['reg']);
       }
     ?>
@@ -56,7 +61,7 @@ session_start();
         <input type="text" placeholder="Enter Your User Name" required name="userName">
     </div>
     <div class="input-box">
-        <input type="e-mail" placeholder="Enter Your E-mail" required name="mail">
+        <input type="email" placeholder="Enter Your E-mail" required name="mail">
     </div>
     <div class="input-box">
         <input type="text" placeholder="Create a Password" required name="pass">
@@ -86,7 +91,9 @@ session_start();
       document.querySelector(".register-form").classList.add("hidden");
       // Show the login form
       document.querySelector(".wrapper").classList.remove("hidden");
+      
     });
   </script>
 </body>
+
 </html>
