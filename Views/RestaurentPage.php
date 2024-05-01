@@ -43,7 +43,7 @@
         <h1>Restaurent at XTON</h1>
     </section>
     
-    <div class="bigbox">
+  <div class="bigbox">
     <section class="terminal">
         
         <div class="select-terminal">
@@ -60,59 +60,138 @@
         Select a Catagory
         </div>
         <div class="select-category">
-            <button class="btn">Family Favourits</button>
-            <button class="btn">Casual Dining</button>
-            <button class="btn">Coffee House & Cafe</button>
-            <button class="btn">International Cusine</button>
+            <button class="btn" id ="fastfood">Fast Food</button>
+            <button class="btn" id ="lunch">Lunch</button>
+            <button class="btn" id ="coffee">Coffee House & Cafe</button>
+            <button class="btn" id ="interCousine">International Cusine</button>
         </div>
     </section>
-    
-
-        <section class="shop-selection">
-        <h1 class="h-primary"></h1>
+    <div class="foods">
+      <section class="shop-selection">
         <div id="shop">
-            <div class="box">
-                <img src="../img/Restaurent_Pic/Bigsmoke.jpeg" alt="">
-                <a href="https://www.big-smoke.co.uk/" target="_blank" class="btn">View Details</a>
-            
-            </div>
-            <div class="box">
-                <img src="../img/Restaurent_Pic/Black Sheep Coffee.jpeg" alt="">
-                <a href="https://leavetheherdbehind.com/" target="_blank" class="btn">View Details</a>
-            </div>
-            <div class="box">
-                <img src="../img/Restaurent_Pic/Cavier House.jpg" alt="">
-                <a href="https://www.caviarhouse-prunier.com/" target="_blank" class="btn">View Details</a>
-            </div>
-            <div class="box">
-                <img src="../img/Restaurent_Pic/Girraffe.png" alt="">
-                <a href="https://www.emiratesleisureretail.com/brands/giraffe-world-kitchen/" target="_blank" class="btn">View Details</a>
-        </div>
-        </section>
+        <!-- fastpood show-->
+        <?php 
+        require_once('../Models/alldb.php');
+        $res=get_fast_foods();
+        while($row=mysqli_fetch_assoc($res)){
+            echo "<div class='box fastfood'>";
+            echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image'>";
+            echo "<p>".$row['name']."</p>";
+            echo "<button class ='btn'>Add to cart</button>";
+            echo "<button class ='btn'>Buy</button>";
+            echo "</div>";
+        }
+        ?>
+        <!-- lunch show-->
+        <?php 
+        $res=get_lunch();
+        while($row=mysqli_fetch_assoc($res)){
+            echo "<div class='box lunch'>";
+            echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image' style='width: 120%'>";
+            echo "<p>".$row['name']."</p>";
+            echo "<button class ='btn'>Add to cart</button>";
+            echo "<button class ='btn'>Buy</button>";
+            echo "</div>";
+        }
+        ?>
+        <!-- coffee show-->
+        <?php 
+        $res=get_coffee();
+        while($row=mysqli_fetch_assoc($res)){
+            echo "<div class='box coffee'>";
+            echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image'>";
+            echo "<p>".$row['name']."</p>";
+            echo "<button class ='btn'>Add to cart</button>";
+            echo "<button class ='btn'>Buy</button>";
+            echo "</div>";
+        }
+        ?>
+        <!-- interCousine show-->
+        <?php
+        $res=get_interCousine();
+        while($row=mysqli_fetch_assoc($res)){
+            echo "<div class='box interCousine'>";
+            echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image' style='width: 120%'>";
+            echo "<p>".$row['name']."</p>";
+            echo "<button class ='btn'>Add to cart</button>";
+            echo "<button class ='btn'>Buy</button>";
+            echo "</div>";
+        }
+        ?>
 
-        <section class="shop-selection2">
-        <h1 class="h-primary"></h1>
-        <div id="shop">
-            <div class="box2">
-                <img src="../img/Restaurent_Pic/Cafe Nero.jpg" alt="">
-                <a href="https://www.caffenero.com/" target="_blank" class="btn">View Details</a>
-            </div>
-            <div class="box2">
-                <img src="../img/Restaurent_Pic/StarBucks.jpg" alt="">
-                <a href="https://www.starbucks.com/" target="_blank" class="btn">View Details</a>
-            </div>
-            <div class="box2">
-                <img src="../img/Restaurent_Pic/Ocean.jpg" alt="">
-                <a href="https://www.rwsentosa.com/en/restaurants/signature-restaurants/ocean-restaurant" target="_blank" class="btn">View Details</a>>
-            </div>
-            <div class="box2">
-                <img src="../img/Restaurent_Pic/QueensArms.jpg" alt="">
-                <a href="https://www.thequeensarmskensington.co.uk/" target="_blank" class="btn">View Details</a>
-        </div>
         </section>
-    </section>
-    </div>
-    
+        </div>
+  </div>
+        <script>
+            const fastfoodbtn=document.getElementById('fastfood');
+            const lunchbtn=document.getElementById('lunch');
+            const coffeebtn=document.getElementById('coffee');
+            const interCousinebtn=document.getElementById('interCousine');
+
+            const fastfoodElements = document.querySelectorAll('.fastfood');
+            const lunchElements = document.querySelectorAll('.lunch');
+            const coffeeElements = document.querySelectorAll('.coffee');
+            const interCousineElements = document.querySelectorAll('.interCousine');
+
+            fastfoodbtn.addEventListener('click',function(){
+                fastfoodElements.forEach(element => {
+                  element.style.display = 'block';
+                });
+                lunchElements.forEach(element => {
+                  element.style.display = 'none';
+                });
+                coffeeElements.forEach(element => {
+                  element.style.display = 'none';
+                });
+                interCousineElements.forEach(element => {
+                  element.style.display = 'none';
+                });
+
+            });
+
+            lunchbtn.addEventListener('click',function(){  
+                lunchElements.forEach(element => {
+                  element.style.display = 'block';
+                });           
+                fastfoodElements.forEach(element => {
+                  element.style.display = 'none';
+                });
+                coffeeElements.forEach(element => {
+                  element.style.display = 'none';
+                });
+                interCousineElements.forEach(element => {
+                  element.style.display = 'none';
+                });
+            });
+            coffeebtn.addEventListener('click',function(){  
+                lunchElements.forEach(element => {
+                  element.style.display = 'none';
+                });           
+                fastfoodElements.forEach(element => {
+                  element.style.display = 'none';
+                });
+                coffeeElements.forEach(element => {
+                  element.style.display = 'block';
+                });
+                interCousineElements.forEach(element => {
+                  element.style.display = 'none';
+                });
+            });
+            interCousinebtn.addEventListener('click',function(){  
+                lunchElements.forEach(element => {
+                  element.style.display = 'none';
+                });           
+                fastfoodElements.forEach(element => {
+                  element.style.display = 'none';
+                });
+                coffeeElements.forEach(element => {
+                  element.style.display = 'none';
+                });
+                interCousineElements.forEach(element => {
+                  element.style.display = 'block';
+                });
+            });            
+        </script>
     <footer>
       <!-- First Footer Section -->
       <div class="footer-1st">
