@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+.sidebar{
+    height: 49vw;
+    width: 20vw;
+    float: left;
+    position: sticky;
+    top: 0px;
+    background-color: hsl(182, 58%, 55%);
+    border: 10%;
+    border-radius: 35px 0px 0px 35px;
+    border-right: 4px solid white;
+
+}
+.navbar{
+    background-color: hsl(160, 70%, 30%);
+    height: 7vw;
+    border-radius: 0px 35px 0px 0px;
+    border-bottom: 4px solid white;
+}
+.content{
+    height: 42vw;
+    border-radius: 0px 0px 35px 0px;
+    background-color: hsl(160, 70%, 46%);
+}
+#logo {
+    margin: 20px; 
+    border-radius: 20%;
+}
+  
+#logo img {
+    width: 18vw;
+    height: 7vw;
+    
+}
+.profile_pic{
+    margin: 20px; 
+    border-radius: 60%;
+}
+  
+.profile_pic img{
+    width: 18vw;
+    height: 7vw;
+}
+  

@@ -17,9 +17,9 @@
         }
     }
 
-    function  registration($user,$mail,$pass,$Rpass){
-        $sql="INSERT INTO `user_info`(`user`, `pass`, `E-mail`) VALUES ('$user','$pass','$mail');";
-        $con=conn();
+    function registration($user, $mail, $pass, $imgContent) {
+        $sql = "INSERT INTO `user_info`(`user`, `pass`, `E-mail`, `img`) VALUES ('{$user}','{$pass}','{$mail}','{$imgContent}')";
+        $con = conn();
         try{
             mysqli_query($con, $sql);
             return true;
@@ -27,7 +27,9 @@
         catch(mysqli_sql_exception){
             return false;
         }
+        
     }
+        
 
     function get_fast_foods(){
         $sql="select * from rest_foods where type='fastfood'";
@@ -49,6 +51,12 @@
     }
     function get_interCousine(){
         $sql="select * from rest_foods where type='interCousi'";
+        $con=conn();
+        $res= mysqli_query($con,$sql);
+        return $res;
+    }
+    function get_user_info($user){
+        $sql="select * from user_info where user='$user'";
         $con=conn();
         $res= mysqli_query($con,$sql);
         return $res;
