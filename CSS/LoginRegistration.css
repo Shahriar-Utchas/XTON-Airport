@@ -150,3 +150,18 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
+.wrapper img{
+  position: fixed;
+  width: 8vw;
+  height: 6vw;
+  left: 2vw;
+  border-radius: 30%;
+}
+.wrapper2 img{
+  position: fixed;
+  width: 7vw;
+  height: 4vw;
+  left: 1vw;
+  top: 30px;
+  border-radius: 30%;
+}
