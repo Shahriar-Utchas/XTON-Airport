@@ -4,10 +4,12 @@
    $user = $_POST['user'];
    $password = $_POST['pass'];
    $status=logCheck($user,$password);
+   $_SESSION['user']="";
 
    if($status)
    {
-      echo"Login Successfull";
+      $_SESSION['user']=$user;
+      header("location:../Views/passengerHome.php");
    }
    else{
       header("location:../Views/LoginRegistration.php");
