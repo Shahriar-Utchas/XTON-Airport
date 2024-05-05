@@ -21,6 +21,8 @@ session_start();
     
   </div>
   <div class="wrapper">
+    <!-- login form -->
+    <a href="../home.php"><img src="../img/Restaurent_Pic/logo.png" alt=""></a>
     <h2>Login</h2>
     <form method="post" action="../Controllers/logCheckController.php">
       <div class="input-box">
@@ -52,11 +54,20 @@ session_start();
        <?php
         unset($_SESSION['reg']);
       }
+      if(!empty($_SESSION['reg2'])) {
+        ?>
+        <script>swal("success", "Registration Successfull. Try login Now!", "success");</script>
+       <?php
+        unset($_SESSION['reg2']);
+      }
     ?>
   </div>
+
+  <!-- Register form -->
   <div class="wrapper2 register-form hidden">
+  <a href="../home.php"><img src="../img/Restaurent_Pic/logo.png" alt=""></a>
     <h2>Register Now</h2>
-    <form method="POST" action="../Controllers/registrationController.php">
+    <form method="POST" action="../Controllers/registrationController.php" enctype="multipart/form-data">
       <div class="input-box">
         <input type="text" placeholder="Enter Your User Name" required name="userName">
     </div>
@@ -64,12 +75,15 @@ session_start();
         <input type="email" placeholder="Enter Your E-mail" required name="mail">
     </div>
     <div class="input-box">
-        <input type="text" placeholder="Create a Password" required name="pass">
+        <input type="password" placeholder="Create a Password" required name="pass">
     </div>
     <div class="input-box">
-        <input type="text" placeholder="Re-type your Password" required name="Rpass">
+        <input type="password" placeholder="Re-type your Password" required name="Rpass">
     </div>
-      <button class="btn" name="log">Complete Registration</button>
+
+    Upload your image: <input type="file" name="img" accept=".jpg, .jpeg, .png">
+
+      <button class="btn" name="log" type="submit">Complete Registration</button>
     </form>
     <div class="register-link">
       Already have an account?

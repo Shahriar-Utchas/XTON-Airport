@@ -18,10 +18,16 @@
     }
 
     function registration($user, $mail, $pass, $imgContent) {
-        $sql = "INSERT INTO `user_info`(`user`, `pass`, `E-mail`, `img`) VALUES ('{$user}','{$pass}','{$mail}','{$imgContent}')";
+        $sql1 = "INSERT INTO `user_info`(`user`, `pass`, `E-mail`, `img`) VALUES ('{$user}','{$pass}','{$mail}','{$imgContent}')";
+        $sql2 = "INSERT INTO `user_info`(`user`, `pass`, `E-mail`) VALUES ('{$user}','{$pass}','{$mail}')";
         $con = conn();
         try{
-            mysqli_query($con, $sql);
+            if(!empty($imgContent)){
+                mysqli_query($con, $sql1);
+            }
+            else{
+                mysqli_query($con, $sql2);
+            }
             return true;
         }
         catch(mysqli_sql_exception){

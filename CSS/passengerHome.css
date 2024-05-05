@@ -1,49 +1,111 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-    overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-decoration: none;
 }
-.sidebar{
-    height: 49vw;
-    width: 20vw;
-    float: left;
-    position: sticky;
-    top: 0px;
-    background-color: hsl(182, 58%, 55%);
-    border: 10%;
-    border-radius: 35px 0px 0px 35px;
-    border-right: 4px solid white;
-
+.sidebar {
+  height: 49vw;
+  width: 20vw;
+  float: left;
+  position: sticky;
+  top: 0px;
+  background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(270, 80%, 50%));
+  border: 10%;
+  border-radius: 35px 0px 0px 35px;
+  border-right: 4px solid white;
 }
-.navbar{
-    background-color: hsl(160, 70%, 30%);
-    height: 7vw;
-    border-radius: 0px 35px 0px 0px;
-    border-bottom: 4px solid white;
+.navbar {
+  background: linear-gradient(180deg, hsl(270, 80%, 50%), hsl(210, 100%, 75%));
+  height: 7vw;
+  border-radius: 0px 35px 0px 0px;
+  border-bottom: 4px solid white;
 }
-.content{
-    height: 42vw;
-    border-radius: 0px 0px 35px 0px;
-    background-color: hsl(160, 70%, 46%);
+.content {
+  height: 42vw;
+  border-radius: 0px 0px 35px 0px;
+  background: linear-gradient(180deg, hsl(207, 80%, 50%), hsl(210, 100%, 75%));
 }
 #logo {
-    margin: 20px; 
-    border-radius: 20%;
+  margin: 20px;
+  border-radius: 20%;
 }
-  
+
 #logo img {
-    width: 18vw;
-    height: 7vw;
-    
+  width: 18vw;
+  height: 7vw;
 }
-.profile_pic{
-    margin: 20px; 
-    border-radius: 60%;
+.profile_pic {
+  margin: 20px;
+  border-radius: 60%;
 }
+
+.options button {
+  border-radius: 10px;
+  width: 15vw;
+  height: 2.6vw;
+  margin: 10px;
+  font-size: 1.5vw;
+  font-weight: bold;
+  background-color: hsl(180, 19%, 59%);
+  color: hsl(0, 0%, 0%);
+  transition: background-color 0.5s ease;
+}
+
+.options button:hover {
+  color: white;
+  background-color: hsl(207, 80%, 60%);
+  cursor: pointer;
+}
+.options button:active {
+  color: white;
+  background-color: hsl(207, 80%, 20%);
+  cursor: pointer;
+}
+.name {
+  font-size: 2vw;
+  font-weight: bold;
+  color: white;
+  margin: 10px;
+}
+
+.searchBar {
+  color: white;
+  display: flex;
+  justify-content: center;
   
-.profile_pic img{
-    width: 18vw;
-    height: 7vw;
 }
-  
+.searchBar input {
+  text-align: center;
+  margin-left: 5vw;
+  border-radius: 18px;
+  width: 28vw;
+  height: 2.8vw;
+  background-color: rgb(238, 217, 217);
+  font-size: 1.4vw;
+}
+.search-icon {
+  position: relative;
+  right: 3vw;
+  top: 0.7vw;
+  color: black;
+}
+
+.navbar button{
+    border-radius: 10px;
+    width: 10vw;
+    height: 2.6vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    background-color: hsl(49, 77%, 48%);
+    color: hsl(0, 0%, 0%);
+    transition: background-color 0.5s ease;
+    pointer-events: none;
+    position: relative;
+    top: 2.3vw;
+    left: 2vw;
+}
+#out{
+    background-color: hsl(0, 100%, 65%);
+}
