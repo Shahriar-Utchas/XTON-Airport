@@ -14,7 +14,7 @@
   background-color: #4f5ea3;
   display: flex;
   align-items: center;
-  height: 6vw;
+  height: 6 vw;
   font-size: 1.4vw;
 }
 
@@ -28,24 +28,35 @@
 
 .nav2-content p {
   display: inline;
-  margin-left: 6vw;
+  margin-left: 2vw;
 }
 .nav2 a {
-  text-decoration: none;
+  /* text-decoration: none;
+  color: white; */
+  padding: .66vw 2.2375vw;
+  border-radius: 0.781vw;
   color: white;
+  text-decoration: none;
+  font-family: "Bree Serif", serif;
+  /* border: 2px solid red; */
 }
 .nav2 a:hover {
-  text-decoration: underline;
-  color: rgb(167, 204, 239);
+  /* text-decoration: underline;
+  color: rgb(167, 204, 239); */
+  color: black;
+  background-color: rgb(62, 57, 211);
+  transition: all 0.35s ease;
 }
 
 .nav2-searchBar {
   color: white;
   display: flex;
+  position: relative;
+  left: 3vw;
 }
 .nav2-searchBar input {
   text-align: center;
-  margin-left: 5vw;
+  margin-left: 3vw;
   border-radius: 18px;
   width: 25vw;
   height: 2.8vw;
@@ -123,6 +134,7 @@
 .home-text a:hover {
   text-decoration: underline;
   color: rgb(63, 62, 62);
+
 }
 .home-text i {
   position: relative;
@@ -210,18 +222,18 @@
   position: relative;
   bottom: 1.8vw;
   left: 20vw;
+  width: 20%;
 }
 .view-arrivals {
   font-size: 2.3vw;
-}
-.view-arrivals a:hover {
-  text-decoration: underline;
-  color: rgb(63, 62, 62);
-}
-.view-arrivals a {
   text-decoration: none;
   color: black;
 }
+.view-arrivals:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
+}
+
 .view-arrivals i {
   position: relative;
   top: 0.3vw;
@@ -491,4 +503,154 @@ footer {
   .footer-last {
     font-size: 2.1vw;
   }
+}
+.drop-down{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 12vw;
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 69px;
+  
+  
+}
+.drop-down-op{
+  /* border: 2px solid red; */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down li{
+  /* display: none; */
+  padding: 0.8vw;
+  font-size: 1.6vw;
+
+}
+.drop-down a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+.drop-down-flights{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 25vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 69px;
+
+}
+.drop-down-flights-op{
+  /* border: 2px solid red;  */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down-flights li{
+  /* display: none; */
+  padding: 0.7vw;
+  font-size: 1.6vw;
+
+}
+.drop-down-flights a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down-flights a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+
+
+.drop-down-booking{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 36vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 69px;
+
+}
+.drop-down-booking-op{
+  /* border: 2px solid red;  */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down-booking li{
+  /* display: none; */
+  padding: 0.7vw;
+  font-size: 1.6vw;
+
+}
+.drop-down-booking a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down-booking a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+
+.drop-down-reward{
+  visibility: hidden;
+  position: absolute;
+  left: 48vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 69px;
+  color: white;
+  font-style: italic;
+
+}
+.drop-down-reward-op{
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 110%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.drop-down-reward-op a{
+  text-decoration: none;
+  color: hsl(120, 100%, 65%)
+}
+.drop-down-reward-op a:hover{
+  color: hsl(120, 100%, 35%)
+}
+.arrival-table{
+  visibility: hidden;
+  position: relative;
+  left: 53vw;
 }
