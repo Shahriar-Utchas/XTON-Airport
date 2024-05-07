@@ -67,4 +67,11 @@
         $res= mysqli_query($con,$sql);
         return $res;
     }
+    
+    function getArrivals(){
+        $sql="select * from arrivals";
+        $con=conn();
+        $res= mysqli_query($con,$sql);
+        return $res;
+    }
 ?>
