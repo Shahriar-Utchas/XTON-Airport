@@ -1,3 +1,13 @@
+<?php 
+  require_once('../Controllers/resturentController.php');
+if($_SESSION['user']=="")
+{
+    header("location:LoginRegistration.php");
+}
+require_once('../Models/alldb.php');
+
+$info = get_user_info($_SESSION['user']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +17,13 @@
     <link rel="stylesheet" href="../CSS/RestaurentPage.css">
       <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head> 
 
 <body>
-    <div class="nav1">
-        <i class="fa-solid fa-circle-exclamation"></i> M25 Junction 10-11 Closure: 15-18 March
-    </div>
     <nav id="navbar">
         <div id="logo">
-            <img src="../img/Restaurent_Pic/logo.png" alt="">
+            <a href="../home.php"><img src="../img/Restaurent_Pic/logo.png" alt=""></a>
         </div>
 
         <ul>
@@ -33,11 +41,41 @@
         </div>
 
         <div class="nav2-login">
-         <a href="../Views/LoginRegistration.php"><span><i class="fa-solid fa-right-to-bracket"></i></span></a>
+          <?php  
+            while($row=mysqli_fetch_assoc($info)){
+            echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image' style='width: 130%; height: 55px; border-radius: 50%;'>";
+            }
+          ?>
+        </div>
+        <div class="cart tooltip">
+          <i class="fa-solid fa-cart-arrow-down"></i>
+          <span class="tooltiptext">Show all cart items</span>
         </div>
     </nav>
     <hr>
-
+    <div class="cartItem">
+      <table border ="1">
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        <?php while($r=mysqli_fetch_assoc($cart_info)){ ?>
+           <tr>
+                <td><?php echo $r["item"]; ?></td>
+                <td><?php echo $r["price"]; ?></td>
+           </tr>
+           <?php } ?>
+      </table>
+    </div>
+    <script>
+      const cart = document.querySelector('.cart');
+      const cartItem = document.querySelector('.cartItem');
+      cart.addEventListener('click',function(){
+        cartItem.style.visibility = cartItem.style.visibility === 'visible' ? 'hidden' : 'visible';
+      });
+    </script>
     <section id="home">
         <h3 class="h-primary">XTON : Welcome to XTON / At the Airport/RESTAURENT</h3>
         <h1>Restaurent at XTON</h1>
@@ -71,57 +109,86 @@
         <div id="shop">
         <!-- fastpood show-->
         <?php 
-        require_once('../Models/alldb.php');
-        $res=get_fast_foods();
-        while($row=mysqli_fetch_assoc($res)){
+        while($row=mysqli_fetch_assoc($fast_food)){
             echo "<div class='box fastfood'>";
             echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image'>";
             echo "<p>".$row['name']."</p>";
-            echo "<button class ='btn'>Add to cart</button>";
-            echo "<button class ='btn'>Buy</button>";
+            echo "<form action='../Controllers/resturentController.php' method='get'>";
+            echo "<button class ='btn' name='cart' value='".$row['id']."'>Add to cart</button>";
+            echo "<button class ='btn' name='buy' value='".$row['id']."'>Buy</button>";
+            echo "</form>";
             echo "</div>";
         }
         ?>
         <!-- lunch show-->
         <?php 
-        $res=get_lunch();
-        while($row=mysqli_fetch_assoc($res)){
+        while($row=mysqli_fetch_assoc($lunch)){
             echo "<div class='box lunch'>";
             echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image' style='width: 120%'>";
             echo "<p>".$row['name']."</p>";
-            echo "<button class ='btn'>Add to cart</button>";
-            echo "<button class ='btn'>Buy</button>";
+            echo "<form action='../Controllers/resturentController.php' method='get'>";
+            echo "<button class ='btn' name='cart' value='".$row['id']."'>Add to cart</button>";
+            echo "<button class ='btn' name='buy' value='".$row['id']."'>Buy</button>";
+            echo "</form>";         
             echo "</div>";
         }
         ?>
         <!-- coffee show-->
         <?php 
-        $res=get_coffee();
-        while($row=mysqli_fetch_assoc($res)){
+        while($row=mysqli_fetch_assoc($coffee)){
             echo "<div class='box coffee'>";
             echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image'>";
             echo "<p>".$row['name']."</p>";
-            echo "<button class ='btn'>Add to cart</button>";
-            echo "<button class ='btn'>Buy</button>";
+            echo "<form action='../Controllers/resturentController.php' method='get'>";
+            echo "<button class ='btn' name='cart' value='".$row['id']."'>Add to cart</button>";
+            echo "<button class ='btn' name='buy' value='".$row['id']."'>Buy</button>";
+            echo "</form>";;
             echo "</div>";
         }
         ?>
         <!-- interCousine show-->
         <?php
-        $res=get_interCousine();
-        while($row=mysqli_fetch_assoc($res)){
+        while($row=mysqli_fetch_assoc($cousine)){
             echo "<div class='box interCousine'>";
             echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image' style='width: 120%'>";
             echo "<p>".$row['name']."</p>";
-            echo "<button class ='btn'>Add to cart</button>";
-            echo "<button class ='btn'>Buy</button>";
+            echo "<form action='../Controllers/resturentController.php' method='get'>";
+            echo "<button class ='btn' name='cart' value='".$row['id']."'>Add to cart</button>";
+            echo "<button class ='btn' name='buy' value='".$row['id']."'>Buy</button>";
+            echo "</form>";
             echo "</div>";
         }
         ?>
-
         </section>
         </div>
   </div>
+  <?php 
+  if(!empty($_SESSION['cart_status'])) {
+    ?>
+     <script>swal("Success", "Added to cart!", "success");</script>
+    <?php
+    unset($_SESSION['cart_status']);
+  }
+  if(!empty($_SESSION['cart_status2'])) {
+    ?>
+     <script>swal("Failed", "Failed to add to cart!", "error");</script>
+    <?php
+    unset($_SESSION['cart_status2']);
+  }
+  if(!empty($_SESSION['buy_status'])) {
+    ?>
+     <script>swal("Success", "Added to buy!", "success");</script>
+    <?php
+    unset($_SESSION['buy_status']);
+  }
+  if(!empty($_SESSION['buy_status2'])) {
+    ?>
+     <script>swal("Failed", "Failed to add to buy!", "error");</script>
+    <?php
+    unset($_SESSION['buy_status2']);
+  }
+  ?>
+  
         <script>
             const fastfoodbtn=document.getElementById('fastfood');
             const lunchbtn=document.getElementById('lunch');

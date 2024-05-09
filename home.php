@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,38 +18,26 @@
   <div class="container">
     <!-- Navigation Bar -->
     <header>
-      <!-- Announcement -->
-      <div class="nav1">
-        <i class="fa-solid fa-circle-exclamation"></i> M25 Junction 10-11 Closure: 15-18 March
-      </div>
-      <!-- Logo and Navigation Links -->
-      <div class="nav2">
-        <div class="logo"></div>
-        <div class="nav2-content">
-          <p >
-            <a href="#" id ="airport">At the Airport</a>
-          </p>
-          <p>
-            <a href="#" id = "flights">Flights</a>
-          </p>
-          <p>
-            <a href="#" id = "booking">Booking</a>
-          </p>
-          <p>
-            <a href="#" id = "reward">Reward</a>
-          </p>
-        </div>
-        <!-- Search Bar -->
+    <nav id="navbar">
+    <div class="logo"></div>
+
+        <ul>
+            <li class="item" id ="airport"><a href="#">At the Airport</a></li>
+            <li class="item" id = "flights"><a href="#">Flights</a></li>
+            <li class="item" id = "booking"><a href="#">Booking</a></li>
+            <li class="item"><a href="#">Help</a></li>
+            <li class="item" id = "reward"><a href="#">Reward</a></li>
+        </ul>
         <div class="nav2-searchBar">
           <input type="text" placeholder="search here" />
           <div class="search-icon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
-        <!-- Notification and User Icons -->
         <div class="nav2-login">
          <a href="Views/LoginRegistration.php"><span><i class="fa-solid fa-right-to-bracket"></i></span></a>
         </div>
+</nav>          
       </div>
       <ul class="drop-down">
           <div class="drop-down-op">
@@ -177,7 +168,7 @@
             Restaurants at Airport
           </div>
           <div class="restaurant2">
-            <a href="Views/RestaurentPage.php">Browse Cafes and Restaurants</a>
+            <a href="Views/RestaurentPage.php" id = "restaurent">Browse Cafes and Restaurants</a>
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
@@ -223,8 +214,8 @@
           <div class="info">
             Discover XTON
             <p>Special Offer.</p>
-            <p>Where To Eat.</p>
-            <p>Where to Shop.</p>
+            <p class = "foot-link"><a href="Views/RestaurentPage.php"> Where To Eat</a></p>
+            <p class = "foot-link"><a href="#">Where to Shop</a></p>
           </div>
           <!-- Social Media Links -->
           <div class="info">
@@ -396,7 +387,14 @@
     });
 
   </script>
-  <script src="JS/weather.js"></script>
+  <script>
+    document.getElementById("restaurent").addEventListener("click", function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "Controllers/set_session.php", true);
+        xhr.send();
+    });
+</script>
 
+  <script src="JS/weather.js"></script>
 </body>
 </html>

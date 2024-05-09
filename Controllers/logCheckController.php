@@ -9,7 +9,15 @@
    if($status)
    {
       $_SESSION['user']=$user;
-      header("location:../Views/passengerHome.php");
+      if(!empty($_SESSION['restaurant2'])){
+      
+         header("location:../Views/RestaurentPage.php");
+         unset($_SESSION['restaurant2']);
+      }
+      else{
+         header("location:../Views/passengerHome.php");
+         unset($_SESSION['restaurant2']);
+      }
    }
    else{
       header("location:../Views/LoginRegistration.php");

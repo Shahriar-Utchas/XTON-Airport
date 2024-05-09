@@ -17,7 +17,7 @@
   background-color: #2b2974;
   display: flex;
   align-items: center;
-  height: 4.42vw;
+  height: 5vw;
   position: relative;
 }
 
@@ -41,7 +41,7 @@
 
 #logo img {
   width: 9.03vw;
-  height: 4.62vw;
+  height: 5vw;
   margin: 0vw -0.052vw;
 }
 
@@ -68,7 +68,8 @@
 }
 
 #navbar ul li a:hover {
-  color: rgb(218, 124, 124);
+  /* color: rgb(218, 124, 124); */
+  color: black;
   background-color: blueviolet;
 }
 
@@ -104,12 +105,16 @@
   height: 2.8vw;
   background-color: rgb(238, 217, 217);
   font-size: 1.4vw;
+  position: relative;
+  right: 2vw;
 }
 .search-icon {
   position: relative;
   right: 3vw;
   top: 0.7vw;
   color: black;
+  position: relative;
+  right: 4vw;
 }
 .nav2-login a {
   display: flex;
@@ -372,5 +377,48 @@ footer {
 .interCousine{
   display: none;
 }
+.nav2-login img{
+  position: relative;
+  right: 25px;
+  top: 3px;
 
+}
+.cart i{
+  font-size: 2.3vw;
+  color: white;
+  cursor: pointer;
+}
+.cart i:hover{
+  color: black;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
 
+  /* Position the tooltip */
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.cartItem{
+  visibility: hidden;
+  position: absolute;
+  left:60vw;
+  background-color:hsl(229, 35%, 69%);
+  max-height: 150px;
+  overflow: scroll;
+}

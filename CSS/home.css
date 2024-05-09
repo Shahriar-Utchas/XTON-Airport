@@ -3,49 +3,61 @@
   margin: 0;
   box-sizing: border-box;
 }
-.nav1 {
-  background-color: rgb(218, 51, 79);
+
+#navbar {
+  background-color: #2b2974;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 1.4vw;
+  height: 5.5vw;
+  position: relative;
 }
-.nav2 {
-  background-color: #4f5ea3;
+
+#navbar::before {
+  content: "";
+  background-color: #2b2974;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 97%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Navigation bar: List Styling */
+#navbar ul {
   display: flex;
-  align-items: center;
-  height: 6 vw;
-  font-size: 1.4vw;
+  font-family: "Bree Serif", serif;
+  font-style: normal;
+}
+
+#navbar ul li {
+  font-family: "Bree Serif", serif;
+  font-size: 1.4rem;
+  list-style: none;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 0.6vw 2.3vw;
+  border-radius: 0.781vw;
+  color: wheat;
+  text-decoration: none;
+  font-family: "Bree Serif", serif;
+}
+
+#navbar ul li a:hover {
+  /* color: rgb(218, 124, 124); */
+  color: black;
+  background-color: blueviolet;
 }
 
 .logo {
   background-image: url(../img/logo.png);
   background-size: cover;
   background-position: center;
-  height: 6vw;
+  height: 5.5vw;
   width: 10%;
-}
-
-.nav2-content p {
-  display: inline;
-  margin-left: 2vw;
-}
-.nav2 a {
-  /* text-decoration: none;
-  color: white; */
-  padding: .66vw 2.2375vw;
-  border-radius: 0.781vw;
-  color: white;
-  text-decoration: none;
-  font-family: "Bree Serif", serif;
-  /* border: 2px solid red; */
-}
-.nav2 a:hover {
-  /* text-decoration: underline;
-  color: rgb(167, 204, 239); */
-  color: black;
-  background-color: rgb(62, 57, 211);
-  transition: all 0.35s ease;
 }
 
 .nav2-searchBar {
@@ -62,16 +74,18 @@
   height: 2.8vw;
   background-color: rgb(238, 217, 217);
   font-size: 1.4vw;
+  position: relative;
+  right: 3.5vw;
 }
 .search-icon {
   position: relative;
-  right: 3vw;
+  right: 5.5vw;
   top: 0.7vw;
   color: black;
 }
 .nav2-login a {
-  /* position: relative; */
-  /* left: 1.2vw; */
+  position: relative;
+  right: 3vw;
   display: flex;
   margin-left: 5vw;
   color: white;
@@ -80,6 +94,7 @@
 .nav2-login i {
   font-size: 2vw;
 }
+
 
 /* main home section */
 #home::before {
@@ -170,7 +185,7 @@
   background-color: rgb(101, 101, 245);
   margin: 6vw;
   position: relative;
-  bottom: 2vw;
+  bottom:3vw;
   border-radius: 8px;
 }
 .arrivals-text {
@@ -430,6 +445,14 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+.foot-link a{
+  text-decoration: none;
+  color: black;
+}
+.foot-link a:hover{
+  text-decoration: underline;
+  color:hsl(0, 0%, 15%);
+}
 @media only screen and (max-width: 999px) {
   .nav2 {
     height: 12vw;
@@ -508,7 +531,7 @@ footer {
   visibility: hidden;
   /* display: none; */
   position: absolute;
-  left: 12vw;
+  left: 11vw;
   list-style: none;
   width: 12%;
   /* border: 2px solid red; */
@@ -516,7 +539,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 69px;
+  top: 45px;
   
   
 }
@@ -545,7 +568,7 @@ footer {
   visibility: hidden;
   /* display: none; */
   position: absolute;
-  left: 25vw;
+  left: 23vw;
   /* background-color: #4f5ea3; */
   list-style: none;
   width: 12%;
@@ -554,7 +577,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 69px;
+  top: 45px;
 
 }
 .drop-down-flights-op{
@@ -584,7 +607,7 @@ footer {
   visibility: hidden;
   /* display: none; */
   position: absolute;
-  left: 36vw;
+  left: 33vw;
   /* background-color: #4f5ea3; */
   list-style: none;
   width: 12%;
@@ -593,7 +616,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 69px;
+  top: 45px;
 
 }
 .drop-down-booking-op{
@@ -621,7 +644,7 @@ footer {
 .drop-down-reward{
   visibility: hidden;
   position: absolute;
-  left: 48vw;
+  left: 52vw;
   /* background-color: #4f5ea3; */
   list-style: none;
   width: 12%;
@@ -630,7 +653,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 69px;
+  top: 45px;
   color: white;
   font-style: italic;
 
@@ -653,4 +676,9 @@ footer {
   visibility: hidden;
   position: relative;
   left: 53vw;
+  width: 40%;
 }
+#arrival{
+  cursor: pointer;
+}
+
