@@ -1,8 +1,8 @@
 <?php
-session_start(); 
-if(!empty($_SESSION['user'])){
-  header("location:passengerHome.php");
-}
+  session_start(); 
+  if(!empty($_SESSION['user'])){
+    header("location:passengerHome.php");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +20,7 @@ if(!empty($_SESSION['user'])){
   </style>
 </head>
 <body>
+
   <div class="background_image">
     
   </div>
@@ -34,9 +35,9 @@ if(!empty($_SESSION['user'])){
       <div class="input-box">
         <input type="password" placeholder="Password" required name="pass">
       </div>
-      <div class="remember-forgot">  <label><input type="checkbox">Remember Me</label>
-        <a id="forgot" href="#" class="fgt">Forgot Password?</a>
-      </div>
+      <div class="remember-forgot" style="display: none;">  <label><input type="checkbox">Remember Me</label>
+    </div>
+      &nbsp;&nbsp;&nbsp;<a id="forgot" href="#" class="fgt">Forgot Password?</a>
       <button class="btn" name="log">LogIn</button>
     </form>
     <div class="register-link">
@@ -62,6 +63,12 @@ if(!empty($_SESSION['user'])){
         <script>swal("success", "Registration Successfull. Try login Now!", "success");</script>
        <?php
         unset($_SESSION['reg2']);
+      }
+      if(!empty($_SESSION['restaurant'])) {
+        ?>
+        <script>swal("Info", "You need to login first!", "info");</script>
+       <?php
+        unset($_SESSION['restaurant']);
       }
     ?>
   </div>
