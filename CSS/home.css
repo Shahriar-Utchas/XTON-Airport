@@ -672,6 +672,37 @@ footer {
 .drop-down-reward-op a:hover{
   color: hsl(120, 100%, 35%)
 }
+.drop-down-help{
+  visibility: hidden;
+  position: absolute;
+  left: 42vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+  color: white;
+  font-style: italic;
+
+}
+.drop-down-help-op{
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 110%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.drop-down-help-op a{
+  text-decoration: none;
+  color: hsl(120, 100%, 65%)
+}
+.drop-down-help-op a:hover{
+  color: hsl(120, 100%, 35%)
+}
 .arrival-table{
   visibility: hidden;
   position: relative;

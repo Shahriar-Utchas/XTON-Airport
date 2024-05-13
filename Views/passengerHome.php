@@ -8,6 +8,7 @@ if($_SESSION['user']=="")
 
 $info = get_user_info($_SESSION['user']);
 $info2 = get_user_info($_SESSION['user']);
+$buy_shop_info = get_shop_buy_info($_SESSION['user']);
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +56,9 @@ $info2 = get_user_info($_SESSION['user']);
         <button id="home"><i class="fa-solid fa-house"></i>&nbsp;Home</button><br><br>
         <button id="profile"><i class="fa-solid fa-user"></i>&nbsp;Profile</button><br><br>
         <button id="settings"><i class="fa-solid fa-gear"></i>&nbsp;Settings</button><br><br>
+        <div class="settings-op">
+        <button id="dlt-acc" onclick = "deleteAcc()"><i class="fa-solid fa-user-slash"></i>&nbsp;Delete Account</button><br><br>
+        </div>
         <button id="out" onclick = "logout()"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;Logout</button><br><br>
         </div>
 
@@ -78,17 +82,20 @@ $info2 = get_user_info($_SESSION['user']);
             <tr>
               <th>Item</th>
               <th>Price</th>
-              <th>Quantity</th>
-              <th>Total</th>
+              <th>Order ID</th>
             </tr>
             <?php while($r=mysqli_fetch_assoc($buy_info)){ ?>
                <tr>
                     <td><?php echo $r["item"]; ?></td>
                     <td><?php echo $r["price"]; ?></td>
+                    <td><?php echo $r["id"]; ?></td>
+                    <td>
                </tr>
                <?php } ?>
             </table>
-            </div>
+            <br>
+            <h3><a href="restaurentPage.php">Order more foods <i class="fa-solid fa-arrow-right"></i></a></h3>
+        </div>
 
             <div class="shop-orders">
             <h1>Shop orders</h1>
@@ -96,17 +103,20 @@ $info2 = get_user_info($_SESSION['user']);
             <tr>
               <th>Item</th>
               <th>Price</th>
-              <th>Quantity</th>
-              <th>Total</th>
+              <th>Order ID</th>
             </tr>
-            <?php while($r=mysqli_fetch_assoc($cart_info)){ ?>
+            <?php while($r=mysqli_fetch_assoc($buy_shop_info)){ ?>
                <tr>
-                    <td><?php echo $r["item"]; ?></td>
+                    <td><?php echo $r["name"]; ?></td>
                     <td><?php echo $r["price"]; ?></td>
+                    <td><?php echo $r["id"]; ?></td>
                </tr>
                <?php } ?>
             </table>
-            </div>
+            <br>
+            <h3><a href="shoppingPage.php">Order more items <i class="fa-solid fa-arrow-right"></i></a></h3>
+            
+        </div>
         </div>
         <div class="profile" style="display: none;">
             <div class="infos options">
@@ -117,7 +127,7 @@ $info2 = get_user_info($_SESSION['user']);
                 <div class="about">
                     <br>
                 <p><span style="color: blue;">Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span> <?php echo $row['user']; ?></p>
-                <p><span style="color: blue;">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span> <?php echo $row['E-mail']; ?></p>
+                <p><span style="color: blue;">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span> <?php echo $row['Email']; ?></p>
                 </div>
                 <?php 
                  } ?>
@@ -130,7 +140,7 @@ $info2 = get_user_info($_SESSION['user']);
                         <input type="text" placeholder="Change your name" name="user">
                     </div>                 
                     <div class="input-box">
-                        <input type="email" placeholder="Change your E-mail" name="email">
+                        <input type="email" placeholder="Change your Email" name="email">
                     </div>                 
                     <div class="input-box">
                         <input type="password" placeholder="Change your password" name="pass">
@@ -149,7 +159,7 @@ $info2 = get_user_info($_SESSION['user']);
             </div>
         </div>
         <div class="settings" style="display: none;">
-            kjshflkjah
+           
         </div>
             
     </div>
@@ -179,10 +189,36 @@ $info2 = get_user_info($_SESSION['user']);
         }
     </script>
     <script>
+        function deleteAcc() {
+            swal({
+                    title: "Are you sure you want to delete your account?",
+                    text: "Once deleted, you will not be able to recover this account!",
+                    icon: "warning",
+                    buttons: ["Cancel", "Delete"],
+                    dangerMode: true,
+                }).then((deleteAccount) => {
+                    if (deleteAccount) {
+                        // Make an AJAX request to delete.php
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", "../Controllers/delete.php", true);
+                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                        xhr.onreadystatechange = function() {
+                            if (xhr.readyState == 4 && xhr.status == 200) {
+                                // Redirect to login page after successful deletion
+                                window.location.href = "../Views/LoginRegistration.php";
+                            }
+                        };
+                        xhr.send();
+                    }
+                });
+        }
+
+    </script>
+    <script>
         document.getElementById("home").addEventListener("click", function() {
             document.querySelector(".home").style.display = "block";
             document.querySelector(".profile").style.display = "none";
-            document.querySelector(".settings").style.display = "none";
+            // document.querySelector(".settings").style.display = "none";
             // document.querySelector(".out").style.display = "none";
             document.querySelector(".nav-text").innerHTML = "Home";
             document.querySelector(".about").style.display = "block";
@@ -193,7 +229,7 @@ $info2 = get_user_info($_SESSION['user']);
         document.getElementById("profile").addEventListener("click", function() {
             document.querySelector(".home").style.display = "none";
             document.querySelector(".profile").style.display = "block";
-            document.querySelector(".settings").style.display = "none";
+            // document.querySelector(".settings").style.display = "none";
             // document.querySelector(".out").style.display = "none";
             document.querySelector(".nav-text").innerHTML = "Profile";
             document.querySelector(".about").style.display = "block";
@@ -201,16 +237,19 @@ $info2 = get_user_info($_SESSION['user']);
             document.querySelector(".changing").style.display = "none";
             document.querySelector("#change_info").style.display = "block";
         });
+        // document.getElementById("settings").addEventListener("click", function() {
+        //     document.querySelector(".home").style.display = "none";
+        //     document.querySelector(".profile").style.display = "none";
+        //     document.querySelector(".settings").style.display = "block";
+        //     document.querySelector(".about").style.display = "block";
+        //     document.querySelector("#cancel").style.display = "none";
+        //     // document.querySelector(".out").style.display = "none";
+        //     document.querySelector(".nav-text").innerHTML = "Profile";
+        //     document.querySelector(".changing").style.display = "none";
+        //     document.querySelector("#change_info").style.display = "block";
+        // });
         document.getElementById("settings").addEventListener("click", function() {
-            document.querySelector(".home").style.display = "none";
-            document.querySelector(".profile").style.display = "none";
-            document.querySelector(".settings").style.display = "block";
-            document.querySelector(".about").style.display = "block";
-            document.querySelector("#cancel").style.display = "none";
-            // document.querySelector(".out").style.display = "none";
-            document.querySelector(".nav-text").innerHTML = "Profile";
-            document.querySelector(".changing").style.display = "none";
-            document.querySelector("#change_info").style.display = "block";
+            document.querySelector(".settings-op").style.display = document.querySelector(".settings-op").style.display === "block" ? "none" : "block";
         });
         document.getElementById("change_info").addEventListener("click", function() {
             document.querySelector(".about").style.display = "none";

@@ -27,11 +27,11 @@ $info = get_user_info($_SESSION['user']);
         </div>
 
         <ul>
-            <li class="item"><a href="#">At the Airport</a></li>
-            <li class="item"><a href="#">Flights</a></li>
-            <li class="item"><a href="#">Booking</a></li>
-            <li class="item"><a href="#">Help</a></li>
-            <li class="item"><a href="#">Reward</a></li>
+            <li class="item" id ="airport"><a href="#">At the Airport</a></li>
+            <li class="item" id = "flights"><a href="#">Flights</a></li>
+            <li class="item" id = "booking"><a href="#">Booking</a></li>
+            <li class="item" id = "help"><a href="#">Help</a></li>
+            <li class="item" id = "reward"><a href="#">Reward</a></li>
         </ul>
         <div class="nav2-searchBar">
           <input type="text" placeholder="search here" />
@@ -43,28 +43,64 @@ $info = get_user_info($_SESSION['user']);
         <div class="nav2-login">
           <?php  
             while($row=mysqli_fetch_assoc($info)){
-            echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image' style='width: 130%; height: 55px; border-radius: 50%;'>";
+            echo "<a href='passengerHome.php'><img src='data:;base64,".base64_encode($row['img'])."' alt='image' style='width: 130%; height: 55px; border-radius: 50%;'></a>";
             }
           ?>
         </div>
         <div class="cart tooltip">
           <i class="fa-solid fa-cart-arrow-down"></i>
-          <span class="tooltiptext">Show all cart items</span>
+          <span class="tooltiptext">cart</span>
         </div>
     </nav>
+    <ul class="drop-down">
+          <div class="drop-down-op">
+              <li><a href="Views/shoppingPage.php">Shopping</a></li>
+              <li><a href="Views/RestaurentPage.php">Restaurent</a></li>
+          </div>
+      </ul>
+      <ul class="drop-down-flights">
+          <div class="drop-down-flights-op">
+                  <li><a href="#">Arrivals</a></li>
+                  <li><a href="#">Departures</a></li>
+                  <li><a href="#">Cancel Flights</a></li>
+          </div> 
+      </ul>
+      <ul class="drop-down-booking">
+          <div class="drop-down-booking-op">
+              <li><a href="#">Parking</a></li>
+              <li><a href="#">Lounge</a></li>
+          </div>
+      </ul>
+      <ul class="drop-down-reward">
+          <div class="drop-down-reward-op">
+              To see your reward points, please <a href="views/LoginRegistration.php">login</a> first.
+          </div>
+      </ul>
+      <ul class="drop-down-help">
+          <div class="drop-down-help-op">
+          For help contact us with +8801924482246 or email us at xton@gmail.com
+          </div>
+      </ul>
     <hr>
     <div class="cartItem">
       <table border ="1">
         <tr>
           <th>Item</th>
           <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
         </tr>
         <?php while($r=mysqli_fetch_assoc($cart_info)){ ?>
            <tr>
                 <td><?php echo $r["item"]; ?></td>
                 <td><?php echo $r["price"]; ?></td>
+                <td>
+                  <form action="../Controllers/resturentController.php" method="get">
+                    <button name="buy" value="<?php echo $r['id']; ?>">Buy</button>
+                    </td>
+                    <td>
+                    <button name="remove" value="<?php echo $r['id']; ?>">Remove</button>
+                    </td>
+                  </form>
+                </td>
            </tr>
            <?php } ?>
       </table>
@@ -113,9 +149,9 @@ $info = get_user_info($_SESSION['user']);
             echo "<div class='box fastfood'>";
             echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image'>";
             echo "<p>".$row['name']."</p>";
+            echo "<p> price: $" .$row['price']."</p>";
             echo "<form action='../Controllers/resturentController.php' method='get'>";
             echo "<button class ='btn' name='cart' value='".$row['id']."'>Add to cart</button>";
-            echo "<button class ='btn' name='buy' value='".$row['id']."'>Buy</button>";
             echo "</form>";
             echo "</div>";
         }
@@ -126,9 +162,9 @@ $info = get_user_info($_SESSION['user']);
             echo "<div class='box lunch'>";
             echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image' style='width: 120%'>";
             echo "<p>".$row['name']."</p>";
+            echo "<p> price: $" .$row['price']."</p>";
             echo "<form action='../Controllers/resturentController.php' method='get'>";
             echo "<button class ='btn' name='cart' value='".$row['id']."'>Add to cart</button>";
-            echo "<button class ='btn' name='buy' value='".$row['id']."'>Buy</button>";
             echo "</form>";         
             echo "</div>";
         }
@@ -139,9 +175,9 @@ $info = get_user_info($_SESSION['user']);
             echo "<div class='box coffee'>";
             echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image'>";
             echo "<p>".$row['name']."</p>";
+            echo "<p> price: $" .$row['price']."</p>";
             echo "<form action='../Controllers/resturentController.php' method='get'>";
             echo "<button class ='btn' name='cart' value='".$row['id']."'>Add to cart</button>";
-            echo "<button class ='btn' name='buy' value='".$row['id']."'>Buy</button>";
             echo "</form>";;
             echo "</div>";
         }
@@ -152,9 +188,9 @@ $info = get_user_info($_SESSION['user']);
             echo "<div class='box interCousine'>";
             echo "<img src='data:;base64,".base64_encode($row['img'])."' alt='image' style='width: 120%'>";
             echo "<p>".$row['name']."</p>";
+            echo "<p> price: $" .$row['price']."</p>";
             echo "<form action='../Controllers/resturentController.php' method='get'>";
             echo "<button class ='btn' name='cart' value='".$row['id']."'>Add to cart</button>";
-            echo "<button class ='btn' name='buy' value='".$row['id']."'>Buy</button>";
             echo "</form>";
             echo "</div>";
         }
@@ -186,6 +222,18 @@ $info = get_user_info($_SESSION['user']);
      <script>swal("Failed", "Failed to add to buy!", "error");</script>
     <?php
     unset($_SESSION['buy_status2']);
+  }
+  if(!empty($_SESSION['remove_status'])) {
+    ?>
+     <script>swal("Success", "Removed from cart!", "success");</script>
+    <?php
+    unset($_SESSION['remove_status']);
+  }
+  if(!empty($_SESSION['remove_status2'])) {
+    ?>
+     <script>swal("Failed", "Failed to remove from cart!", "error");</script>
+    <?php
+    unset($_SESSION['remove_status2']);
   }
   ?>
   
@@ -308,5 +356,150 @@ $info = get_user_info($_SESSION['user']);
       </div>
     </footer>
     
+    <script>
+    //Airport Drop-down
+    document.getElementById("airport").addEventListener("mouseover", function(){
+      const dropDown = document.querySelector(".drop-down");
+      if(dropDown.style.visibility === "visible"){
+        dropDown.style.visibility = "hidden";
+      }
+      else{
+        dropDown.style.visibility = "visible";
+      }
+    });
+    document.getElementById("airport").addEventListener("mouseout", function(){
+      const dropDown = document.querySelector(".drop-down");
+      if(dropDown.style.visibility === "visible"){
+        dropDown.style.visibility = "hidden";
+      }
+      else{
+        dropDown.style.visibility = "visible";
+      }
+    });
+    document.querySelector(".drop-down").addEventListener("mouseover", function(){
+     const dropDown = document.querySelector(".drop-down");
+      dropDown.style.visibility = "visible";
+    });
+    document.querySelector(".drop-down").addEventListener("mouseout", function(){
+     const dropDown = document.querySelector(".drop-down");
+      dropDown.style.visibility = "hidden";
+    });
+
+    //Flights Drop-down
+    document.getElementById("flights").addEventListener("mouseover", function(){
+      const dropDown2 = document.querySelector(".drop-down-flights");
+      if(dropDown2.style.visibility === "visible"){
+        dropDown2.style.visibility = "hidden";
+      }
+      else{
+        dropDown2.style.visibility = "visible";
+      }
+    });
+
+    document.getElementById("flights").addEventListener("mouseout", function(){
+      const dropDown2 = document.querySelector(".drop-down-flights");
+      if(dropDown2.style.visibility === "visible"){
+        dropDown2.style.visibility = "hidden";
+      }
+      else{
+        dropDown2.style.visibility = "visible";
+      }
+    });
+
+    document.querySelector(".drop-down-flights").addEventListener("mouseover", function(){
+     const dropDown = document.querySelector(".drop-down-flights");
+      dropDown.style.visibility = "visible";
+    });
+    document.querySelector(".drop-down-flights").addEventListener("mouseout", function(){
+     const dropDown = document.querySelector(".drop-down-flights");
+      dropDown.style.visibility = "hidden";
+    });
+
+    //Booking Drop-down
+    document.getElementById("booking").addEventListener("mouseover", function(){
+      const dropDown2 = document.querySelector(".drop-down-booking");
+      if(dropDown2.style.visibility === "visible"){
+        dropDown2.style.visibility = "hidden";
+      }
+      else{
+        dropDown2.style.visibility = "visible";
+      }
+    });
+
+    document.getElementById("booking").addEventListener("mouseout", function(){
+      const dropDown2 = document.querySelector(".drop-down-booking");
+      if(dropDown2.style.visibility === "visible"){
+        dropDown2.style.visibility = "hidden";
+      }
+      else{
+        dropDown2.style.visibility = "visible";
+      }
+    });
+
+    document.querySelector(".drop-down-booking").addEventListener("mouseover", function(){
+     const dropDown = document.querySelector(".drop-down-booking");
+      dropDown.style.visibility = "visible";
+    });
+    document.querySelector(".drop-down-booking").addEventListener("mouseout", function(){
+     const dropDown = document.querySelector(".drop-down-booking");
+      dropDown.style.visibility = "hidden";
+    });
+
+    //Reward Drop-down
+    document.getElementById("reward").addEventListener("mouseover", function(){
+      const dropDown2 = document.querySelector(".drop-down-reward");
+      if(dropDown2.style.visibility === "visible"){
+        dropDown2.style.visibility = "hidden";
+      }
+      else{
+        dropDown2.style.visibility = "visible";
+      }
+    });
+    document.getElementById("reward").addEventListener("mouseout", function(){
+      const dropDown2 = document.querySelector(".drop-down-reward");
+      if(dropDown2.style.visibility === "visible"){
+        dropDown2.style.visibility = "hidden";
+      }
+      else{
+        dropDown2.style.visibility = "visible";
+      }
+    });
+    document.querySelector(".drop-down-reward").addEventListener("mouseover", function(){
+     const dropDown = document.querySelector(".drop-down-reward");
+      dropDown.style.visibility = "visible";
+    });
+    document.querySelector(".drop-down-reward").addEventListener("mouseout", function(){
+     const dropDown = document.querySelector(".drop-down-reward");
+      dropDown.style.visibility = "hidden";
+    });
+        //Help Drop-down
+        document.getElementById("help").addEventListener("mouseover", function(){
+      const dropDown2 = document.querySelector(".drop-down-help");
+      if(dropDown2.style.visibility === "visible"){
+        dropDown2.style.visibility = "hidden";
+      }
+      else{
+        dropDown2.style.visibility = "visible";
+      }
+    });
+    document.getElementById("help").addEventListener("mouseout", function(){
+      const dropDown2 = document.querySelector(".drop-down-help");
+      if(dropDown2.style.visibility === "visible"){
+        dropDown2.style.visibility = "hidden";
+      }
+      else{
+        dropDown2.style.visibility = "visible";
+      }
+    });
+    document.querySelector(".drop-down-help").addEventListener("mouseover", function(){
+     const dropDown = document.querySelector(".drop-down-help");
+      dropDown.style.visibility = "visible";
+    });
+    document.querySelector(".drop-down-help").addEventListener("mouseout", function(){
+     const dropDown = document.querySelector(".drop-down-help");
+      dropDown.style.visibility = "hidden";
+    });
+
+    </script>
 </body>
 </html>

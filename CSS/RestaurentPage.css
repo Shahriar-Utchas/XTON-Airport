@@ -118,7 +118,7 @@
 }
 .nav2-login a {
   display: flex;
-  margin-left: 2vw;
+  margin-left: 1vw;
   color: white;
 }
 
@@ -398,7 +398,7 @@ footer {
 }
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 65px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -417,8 +417,187 @@ footer {
 .cartItem{
   visibility: hidden;
   position: absolute;
-  left:60vw;
+  font-size: 1.2rem;
+  left:75vw;
+  bottom: 31.5vw;
   background-color:hsl(229, 35%, 69%);
   max-height: 150px;
+  width: 23vw;
   overflow: scroll;
+}
+.drop-down{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 11vw;
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+  
+  
+}
+.drop-down-op{
+  /* border: 2px solid red; */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down li{
+  /* display: none; */
+  padding: 0.8vw;
+  font-size: 1.6vw;
+
+}
+.drop-down a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+.drop-down-flights{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 23vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+
+}
+.drop-down-flights-op{
+  /* border: 2px solid red;  */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down-flights li{
+  /* display: none; */
+  padding: 0.7vw;
+  font-size: 1.6vw;
+
+}
+.drop-down-flights a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down-flights a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+
+
+.drop-down-booking{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 33vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+
+}
+.drop-down-booking-op{
+  /* border: 2px solid red;  */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down-booking li{
+  /* display: none; */
+  padding: 0.7vw;
+  font-size: 1.6vw;
+
+}
+.drop-down-booking a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down-booking a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+
+.drop-down-reward{
+  visibility: hidden;
+  position: absolute;
+  left: 52vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+  color: white;
+  font-style: italic;
+
+}
+.drop-down-reward-op{
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 110%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.drop-down-reward-op a{
+  text-decoration: none;
+  color: hsl(120, 100%, 65%)
+}
+.drop-down-reward-op a:hover{
+  color: hsl(120, 100%, 35%)
+}
+.drop-down-help{
+  visibility: hidden;
+  position: absolute;
+  left: 42vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+  color: white;
+  font-style: italic;
+
+}
+.drop-down-help-op{
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 110%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.drop-down-help-op a{
+  text-decoration: none;
+  color: hsl(120, 100%, 65%)
+}
+.drop-down-help-op a:hover{
+  color: hsl(120, 100%, 35%)
 }

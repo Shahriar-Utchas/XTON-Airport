@@ -3,6 +3,9 @@
   if(!empty($_SESSION['user'])){
     header("location:passengerHome.php");
   }
+  if(!empty($_SESSION['admin'])){
+    header("../admin/Views/Admin_Dashboard.php");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +40,7 @@
       </div>
       <div class="remember-forgot" style="display: none;">  <label><input type="checkbox">Remember Me</label>
     </div>
-      &nbsp;&nbsp;&nbsp;<a id="forgot" href="#" class="fgt">Forgot Password?</a>
+    <button id="forgetBtn">Forget your password?</button>
       <button class="btn" name="log">LogIn</button>
     </form>
     <div class="register-link">
@@ -101,6 +104,36 @@
     </div>
   </div>
 
+  <div class="wrapper2 forget-form hidden">
+  <a href="../home.php"><img src="../img/Restaurent_Pic/logo.png" alt=""></a>
+    <h2>Reset</h2>
+    <form method="POST" action="../Controllers/registrationController.php" enctype="multipart/form-data">
+    <div class="input-box">
+        <input type="email" placeholder="Enter Your E-mail" required name="mail">
+    </div>
+      <button class="btn" name="log" type="submit">Submit</button>
+    </form>
+    <div class="register-link">
+      Already have an account?
+      <button id="loginBtn2">Login Now</button>
+    </div>
+  </div>
+  <script>
+      document.getElementById("forgetBtn").addEventListener("click", function() {
+      // Hide the login form
+      document.querySelector(".wrapper").classList.add("hidden");
+      // Show the forget password form
+      document.querySelector(".forget-form").classList.remove("hidden");
+      });
+
+      // Add event listener to go back to login form
+      document.getElementById("loginBtn2").addEventListener("click", function() {
+        // Hide the register form
+        document.querySelector(".forget-form").classList.add("hidden");
+        // Show the login form
+        document.querySelector(".wrapper").classList.remove("hidden");
+      });
+    </script>
   <script>
     document.getElementById("registerBtn").addEventListener("click", function() {
       // Hide the login form

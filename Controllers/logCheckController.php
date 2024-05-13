@@ -5,19 +5,27 @@
    $password = $_POST['pass'];
    $status=logCheck($user,$password);
    $_SESSION['user']="";
+   // $_SESSION['admin']="";
 
    if($status)
-   {
-      $_SESSION['user']=$user;
-      if(!empty($_SESSION['restaurant2'])){
-      
-         header("location:../Views/RestaurentPage.php");
-         unset($_SESSION['restaurant2']);
-      }
-      else{
-         header("location:../Views/passengerHome.php");
-         unset($_SESSION['restaurant2']);
-      }
+   {    
+      // if(!empty($_SESSION['restaurant2'])){
+      //       $_SESSION['user'] = $user;
+      //       header("location:../Views/RestaurentPage.php");
+      //       unset($_SESSION['restaurant2']);
+         
+      // }
+      // else{
+         if(!empty($_SESSION['admin'])){
+            header("location:../admin/Views/Admin_Dashboard.php");
+         }
+         else{
+            $_SESSION['user'] = $user;
+            $_SESSION['admin']="";
+            header("location:../Views/passengerHome.php");
+         }
+         // unset($_SESSION['restaurant2']);
+      // }
    }
    else{
       header("location:../Views/LoginRegistration.php");

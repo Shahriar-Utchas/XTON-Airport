@@ -12,7 +12,7 @@ if (isset($_GET['cart'])) {
      $cart_name = $row['name'];
      $cart_price = $row['price'];
   }
-  $add_cart = add_cart($_SESSION['user'],$cart_name, $cart_price);
+  $add_cart = add_cart($_SESSION['user'],$cart_name, $cart_price, $cart_id);
     if ($add_cart) {
         $_SESSION['cart_status'] ="Added to cart"; 
        header('location:../Views/RestaurentPage.php');
@@ -25,8 +25,6 @@ if (isset($_GET['cart'])) {
 $cart_info = get_cart($_SESSION['user']);
 
 if (isset($_GET['buy'])) {
-  
-  
   $buy_id = $_GET['buy'];
   $buy = get_buy_info($buy_id);
     while ($row = mysqli_fetch_assoc($buy)) {
@@ -34,7 +32,7 @@ if (isset($_GET['buy'])) {
          $buy_price = $row['price'];
     }
     
-    $add_buy = add_buy($_SESSION['user'],$buy_name, $buy_price);
+    $add_buy = add_buy($_SESSION['user'],$buy_name, $buy_price, $buy_id);
     if ($add_buy) {
         $_SESSION['buy_status'] ="Added to buy"; 
        header('location:../Views/RestaurentPage.php');
@@ -47,5 +45,16 @@ if (isset($_GET['buy'])) {
 }
 $buy_info = get_buy($_SESSION['user']);
 
-
+if(isset($_GET['remove'])){
+    $remove_id = $_GET['remove'];
+    $remove = remove_cart($remove_id);
+    if ($remove) {
+        $_SESSION['remove_status'] ="Removed from cart"; 
+       header('location:../Views/RestaurentPage.php');
+    }
+    else{
+        $_SESSION['remove_status2'] ="Failed to remove from cart"; 
+       header('location:../Views/RestaurentPage.php');
+    }
+  }
 ?>

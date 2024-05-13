@@ -25,7 +25,7 @@ session_start();
             <li class="item" id ="airport"><a href="#">At the Airport</a></li>
             <li class="item" id = "flights"><a href="#">Flights</a></li>
             <li class="item" id = "booking"><a href="#">Booking</a></li>
-            <li class="item"><a href="#">Help</a></li>
+            <li class="item" id = "help"><a href="#">Help</a></li>
             <li class="item" id = "reward"><a href="#">Reward</a></li>
         </ul>
         <div class="nav2-searchBar">
@@ -41,7 +41,7 @@ session_start();
       </div>
       <ul class="drop-down">
           <div class="drop-down-op">
-              <li><a href="#">Shopping</a></li>
+              <li><a href="Views/shoppingPage.php">Shopping</a></li>
               <li><a href="Views/RestaurentPage.php">Restaurent</a></li>
           </div>
       </ul>
@@ -61,6 +61,11 @@ session_start();
       <ul class="drop-down-reward">
           <div class="drop-down-reward-op">
               To see your reward points, please <a href="views/LoginRegistration.php">login</a> first.
+          </div>
+      </ul>
+      <ul class="drop-down-help">
+          <div class="drop-down-help-op">
+          For help contact us with +8801924482246 or email us at xton@gmail.com
           </div>
       </ul>
     </header>
@@ -145,20 +150,20 @@ session_start();
         <div class="options">
           <div class="target">
             <i class="fa-solid fa-bullseye"></i>
-            Which terminal?
+            Parking at Airport
           </div>
           <div class="target2">
-            <a href="#">Find my terminal</a>
+            <a href="parking/VIEWS/requestinformation.php">Find a slot</a>
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
         <div class="options">
           <div class="services">
             <i class="fa-solid fa-hand-holding-heart"></i>
-            services
+            Lounge at Airport
           </div>
           <div class="services2">
-            <a href="#">Find a service</a>
+            <a href="parking/VIEWS/lounge.php">Find a slot</a>
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
@@ -178,19 +183,12 @@ session_start();
             Shopping at Airport
           </div>
           <div class="shopping2">
-            <a href="#">Shop Now</a>
+            <a href="Views/shoppingPage.php" id = "shopping">Shop Now</a>
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
       </div>
     </section>
-    <!-- Expert Chat -->
-    <div class="expert">
-      <p>
-        <i class="fa-brands fa-rocketchat"></i>
-        Chat With an Expert &nbsp;
-      </p>
-    </div>
     <!-- Footer Section -->
     <footer>
       <!-- First Footer Section -->
@@ -215,7 +213,7 @@ session_start();
             Discover XTON
             <p>Special Offer.</p>
             <p class = "foot-link"><a href="Views/RestaurentPage.php"> Where To Eat</a></p>
-            <p class = "foot-link"><a href="#">Where to Shop</a></p>
+            <p class = "foot-link"><a href="Views/shoppingPage.php">Where to Shop</a></p>
           </div>
           <!-- Social Media Links -->
           <div class="info">
@@ -375,6 +373,35 @@ session_start();
       dropDown.style.visibility = "hidden";
     });
 
+    //Help Drop-down
+    document.getElementById("help").addEventListener("mouseover", function(){
+      const dropDown2 = document.querySelector(".drop-down-help");
+      if(dropDown2.style.visibility === "visible"){
+        dropDown2.style.visibility = "hidden";
+      }
+      else{
+        dropDown2.style.visibility = "visible";
+      }
+    });
+    document.getElementById("help").addEventListener("mouseout", function(){
+      const dropDown2 = document.querySelector(".drop-down-help");
+      if(dropDown2.style.visibility === "visible"){
+        dropDown2.style.visibility = "hidden";
+      }
+      else{
+        dropDown2.style.visibility = "visible";
+      }
+    });
+    document.querySelector(".drop-down-help").addEventListener("mouseover", function(){
+     const dropDown = document.querySelector(".drop-down-help");
+      dropDown.style.visibility = "visible";
+    });
+    document.querySelector(".drop-down-help").addEventListener("mouseout", function(){
+     const dropDown = document.querySelector(".drop-down-help");
+      dropDown.style.visibility = "hidden";
+    });
+
+
     //arrivals
 
     document.getElementById("arrival").addEventListener("click", function(){
@@ -389,6 +416,11 @@ session_start();
   </script>
   <script>
     document.getElementById("restaurent").addEventListener("click", function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "Controllers/set_session.php", true);
+        xhr.send();
+    });
+    document.getElementById("shopping").addEventListener("click", function() {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "Controllers/set_session.php", true);
         xhr.send();

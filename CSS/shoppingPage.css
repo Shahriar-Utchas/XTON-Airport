@@ -1,0 +1,664 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navigation bar */
+  .nav1 {
+    background-color: rgb(218, 51, 79);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4vw;
+  }
+  #navbar {
+    background-color: #2b2974;
+    display: flex;
+    align-items: center;
+    height: 5vw;
+    position: relative;
+  }
+  
+  #navbar::before {
+    content: "";
+    background-color: #2b2974;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 97%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+  }
+  
+  /* Navigation bar: Logo and Image */
+  #logo {
+    margin: 0.31vw 0.052vw;
+    padding-top: 0.3vw;
+  }
+  
+  #logo img {
+    width: 9.03vw;
+    height: 5vw;
+    margin: 0vw -0.052vw;
+  }
+  
+  /* Navigation bar: List Styling */
+  #navbar ul {
+    display: flex;
+    font-family: "Bree Serif", serif;
+    font-style: normal;
+  }
+  
+  #navbar ul li {
+    font-family: "Bree Serif", serif;
+    font-size: 1.5rem;
+    list-style: none;
+  }
+  
+  #navbar ul li a {
+    display: block;
+    padding: 0.46vw 2.2375vw;
+    border-radius: 0.781vw;
+    color: wheat;
+    text-decoration: none;
+    font-family: "Bree Serif", serif;
+  }
+  
+  #navbar ul li a:hover {
+    /* color: rgb(218, 124, 124); */
+    color: black;
+    background-color: blueviolet;
+  }
+  
+  /* Navigation2 bar */
+  #navbar2 {
+    background-color: #2b2974;
+    display: flex;
+    align-items: center;
+    height: 3.62vw;
+    position: relative;
+  }
+  
+  #navbar2::before {
+    content: "";
+    background-color: #2b2974;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 97%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+  }
+  .nav2-searchBar {
+    color: white;
+    display: flex;
+  }
+  .nav2-searchBar input {
+    text-align: center;
+    margin-left: 2vw;
+    border-radius: 18px;
+    width: 25vw;
+    height: 2.8vw;
+    background-color: rgb(238, 217, 217);
+    font-size: 1.4vw;
+    position: relative;
+    right: 2vw;
+  }
+  .search-icon {
+    position: relative;
+    right: 3vw;
+    top: 0.7vw;
+    color: black;
+    position: relative;
+    right: 4vw;
+  }
+  .nav2-login a {
+    display: flex;
+    margin-left: 1vw;
+    color: white;
+  }
+  
+  .nav2-login i {
+    font-size: 2vw;
+  }
+  /* Navigation bar2: Logo and Image */
+  #logo2 {
+    margin: 0.3125vw 0.052vw;
+  }
+  
+  #logo2 img {
+    width: 7.031vw;
+    height: 3.385vw;
+    left: auto;
+    margin: -0.365vw -0.052vw;
+  }
+  
+  #logo3 {
+    margin: 0.3125vw 0.052vw;
+  }
+  
+  #logo3 img {
+    width: 5.208vw;
+    height: 5.208vw;
+    margin-left: 84.375vw;
+    /* margin: -7px 1400px; */
+  }
+  
+  #logo2 h2 {
+    display: flex;
+    height: 1.04vw;
+  }
+  
+  /* Navigation bar2: List Styling */
+  #navbar2 ul {
+    display: flex;
+    font-family: "Bree Serif", serif;
+    font-style: normal;
+  }
+  
+  #navbar2 ul li {
+    font-family: "Bree Serif", serif;
+    font-size: 1.5rem;
+    list-style: none;
+  }
+  
+  #navbar2 ul li a {
+    display: block;
+    padding: 0.26vw 0.9375vw;
+    border-radius: 0.781vw;
+    color: wheat;
+    text-decoration: none;
+    font-family: "Bree Serif", serif;
+  }
+  
+  #navbar2 ul li a:hover {
+    color: rgb(218, 124, 124);
+    background-color: blueviolet;
+  }
+  /* ----------*********---------- */
+  
+  /* Home Section */
+  #home {
+    display: flex;
+    flex-direction: column;
+    height: 43.8vw;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #home::before {
+    content: "";
+    background: url("../img/S03.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 104%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+  }
+  
+  .bigbox {
+    background: url("../img/s07.avif") no-repeat center center/cover;
+    position: relative;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  
+  #home h3 {
+    color: black;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+    position: relative;
+    bottom: 4vw;
+  }
+  
+  #home h1 {
+    font-size: 2.8rem;
+    color: black;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+    font-style: normal;
+    position: relative;
+    bottom: 4vw;
+  }
+  .names{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap:wrap; */
+    /* justify-content: center; */
+    width: 100%;
+    overflow: auto;
+  }
+  #shop {
+    margin: -2.083vw;
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap:wrap;
+    justify-content: center;
+    width: 90%;
+    overflow: auto;
+    position: relative;
+    bottom: 10vw;
+  }
+  
+  #shop .box {
+    border: 0.104vw solid rgb(228, 152, 152);
+    padding: 4vw;
+    margin: 4.896vw;
+    width: 20%;
+    height: 20vw;
+    /* width: 320; */
+    border-radius: 0.781vw;
+    background-color: rgb(240, 233, 233);
+  }
+  
+  #shop .box img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 8.854vw;
+    position: relative;
+    right: 2vw;
+  }
+  
+  .btn {
+    padding: 0.52vw 0.781vw;
+    border: 0.104vw solid white;
+    background-color: rgb(199, 61, 61);
+    color: white;
+    font-size: 0.5rem;
+    border-radius: 0.52vw;
+    cursor: pointer;
+    font-family: "Bree Serif", serif;
+    position: relative;
+    left: 2vw;
+  }
+  
+  /* footer */
+  footer {
+    background-color: #4f5ea3;
+    font-size: 1.4vw;
+    margin-top: 2vw;
+  }
+  .footer-1st {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+  }
+  .footer-logo {
+    background-image: url(../img/logo.png);
+    background-size: cover;
+    background-position: center;
+    height: 4vw;
+    width: 7%;
+  }
+  .title {
+    font-size: 1.3vw;
+    font-weight: bold;
+  }
+  .footer-2nd {
+    height: 7vw;
+    border-bottom: 2px solid red;
+  }
+  .footer2d-info {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid white;
+  }
+  .links {
+    display: flex;
+  }
+  .links i {
+    /* color: red; */
+    padding-left: 1vw;
+  }
+  .footer-last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brands {
+    /* background-color: rgb(51, 51, 145); */
+    border: 2px solid red;
+    height: 20vw;
+    width: 100%;
+    /* margin-left: 10vw; */
+    position: relative;
+    bottom: 13.5vw;
+    border-radius: 12px;
+  }
+  .select-terminal {
+    font-size: 2vw;
+    position: relative;
+    left: 2vw;
+    margin-bottom: 0.8vw;
+  }
+  .select-terminal button {
+    font-size: 1.8vw;
+    position: relative;
+    left: 57vw;
+    /* cursor: pointer; */
+  }
+  
+  .terminal-op button {
+    margin-left: 30px;
+    font-size: 1.8vw;
+    margin-bottom: 1vw;
+  }
+  
+  .select-category button {
+    margin-left: 30px;
+    font-size: 1.2vw;
+  }
+  .shop-selection{
+    position: relative;
+    bottom: 10vw;
+    /* max-height: 35vw; */
+  }
+  .shop-selection2{
+    position: relative;
+    bottom: 5vw;
+  }
+  .box a{
+    text-decoration: none;
+  }
+  .box a:hover{
+    text-decoration:underline ;
+  }
+  .box2 a{
+    text-decoration: none;
+  }
+  .box2 a:hover{
+    text-decoration:underline ;
+  }
+  .apple{
+    display: none;
+  }
+  .cartier{
+    display: none;
+  }
+.sony{
+  display: none;
+}
+.tag{
+  display: none;
+}
+.prada{
+  display: none;
+}
+
+  .interCousine{
+    display: none;
+  }
+  .nav2-login img{
+    position: relative;
+    right: 25px;
+    top: 3px;
+  
+  }
+  .cart i{
+    font-size: 2.3vw;
+    color: white;
+    cursor: pointer;
+  }
+  .cart i:hover{
+    color: black;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 65px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    z-index: 1;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  .cartItem{
+    visibility: hidden;
+    position: absolute;
+    font-size: 1.2rem;
+    left:75vw;
+    bottom: 31.5vw;
+    background-color:hsl(229, 35%, 69%);
+    max-height: 150px;
+    width: 23vw;
+    overflow: scroll;
+  }
+  #brands{
+    margin: -2.083vw;
+    display: flex;
+    /* flex-direction: row; */
+    height: 20vw;
+    width: 102%;
+    overflow: auto;
+  }
+  
+  #brands .box {
+    border: 0.104vw solid rgb(228, 152, 152);
+     padding: 1.5vw; 
+    margin: 4vw;
+    /* padding-left: 2vw;*/
+    /* margin: 4vw;  */
+    width: 200%;
+    height: 12vw;
+    border-radius: 0.781vw;
+    background-color: rgb(240, 233, 233);
+  }
+  #brands .box button{
+    position: relative;
+    top:2vw;
+  }
+  
+  #brands .box img {
+    display: block;
+    margin: auto;
+    /* height: 6.77vw; */
+    height: 4.854vw;
+    width: 8.5vw;
+  }
+.brands{
+    position: relative;
+    bottom:20vw;
+}
+.drop-down{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 11vw;
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+  
+  
+}
+.drop-down-op{
+  /* border: 2px solid red; */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down li{
+  /* display: none; */
+  padding: 0.8vw;
+  font-size: 1.6vw;
+
+}
+.drop-down a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+.drop-down-flights{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 23vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+
+}
+.drop-down-flights-op{
+  /* border: 2px solid red;  */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down-flights li{
+  /* display: none; */
+  padding: 0.7vw;
+  font-size: 1.6vw;
+
+}
+.drop-down-flights a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down-flights a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+
+
+.drop-down-booking{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 33vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+
+}
+.drop-down-booking-op{
+  /* border: 2px solid red;  */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down-booking li{
+  /* display: none; */
+  padding: 0.7vw;
+  font-size: 1.6vw;
+
+}
+.drop-down-booking a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down-booking a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+
+.drop-down-reward{
+  visibility: hidden;
+  position: absolute;
+  left: 52vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+  color: white;
+  font-style: italic;
+
+}
+.drop-down-reward-op{
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 110%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.drop-down-reward-op a{
+  text-decoration: none;
+  color: hsl(120, 100%, 65%)
+}
+.drop-down-reward-op a:hover{
+  color: hsl(120, 100%, 35%)
+}
+.drop-down-help{
+  visibility: hidden;
+  position: absolute;
+  left: 42vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+  color: white;
+  font-style: italic;
+
+}
+.drop-down-help-op{
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 110%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.drop-down-help-op a{
+  text-decoration: none;
+  color: hsl(120, 100%, 65%)
+}
+.drop-down-help-op a:hover{
+  color: hsl(120, 100%, 35%)
+}

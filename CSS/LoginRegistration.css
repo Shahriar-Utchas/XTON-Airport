@@ -62,6 +62,17 @@ body {
   border: none;
   background-color: transparent;
 }
+#forgetBtn {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5vw;
+}
+#forgetBtn:hover {
+  color: #3e22a3;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .wrapper h2 {
   font-size: 5vw;
