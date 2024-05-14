@@ -75,8 +75,8 @@ session_start();
       <div class="home-text">
         <p class="discover">Discover</p>
         <p class="Xton">XTON Airport</p>
-        <a href="#">Find Out More</a>
-        <i class="fa-solid fa-arrow-right"></i>
+        <!-- <a href="#">Find Out More</a> -->
+        <!-- <i class="fa-solid fa-arrow-right"></i> -->
       </div>
       <!-- Arrow Links -->
       <div class="arrow-right">
@@ -89,8 +89,8 @@ session_start();
       <section class="arrivals">
         <!-- Arrivals Text and Details -->
         <div class="arrivals-text">
-          <p>Arrivals</p>
-          <p>Departures</p>
+          <p id = "arrival2">Arrivals</p>
+          <p id = "departure">Departures</p>
           <p>
             <span id = "loc">Dhaka, Bangladesh | </span><span id = "time">Time | </span><span id = "temp"> Temperature</span>
             <i class="fa-solid fa-cloud-sun-rain"></i>
@@ -153,7 +153,7 @@ session_start();
             Parking at Airport
           </div>
           <div class="target2">
-            <a href="parking/VIEWS/requestinformation.php">Find a slot</a>
+            <a href="parking/SCHEDULE2/schedule2.php">Find a slot</a>
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
@@ -405,6 +405,22 @@ session_start();
     //arrivals
 
     document.getElementById("arrival").addEventListener("click", function(){
+      if(document.querySelector(".arrival-table").style.visibility === "hidden"){
+        document.querySelector(".arrival-table").style.visibility = "visible";
+      }
+      else {
+        document.querySelector(".arrival-table").style.visibility = "hidden";
+      }
+    });
+    document.getElementById("arrival2").addEventListener("click", function(){
+      if(document.querySelector(".arrival-table").style.visibility === "hidden"){
+        document.querySelector(".arrival-table").style.visibility = "visible";
+      }
+      else {
+        document.querySelector(".arrival-table").style.visibility = "hidden";
+      }
+    });
+    document.getElementById("departure").addEventListener("click", function(){
       if(document.querySelector(".arrival-table").style.visibility === "hidden"){
         document.querySelector(".arrival-table").style.visibility = "visible";
       }
