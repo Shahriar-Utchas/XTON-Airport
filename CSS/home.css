@@ -1,0 +1,724 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#navbar {
+  background-color: #2b2974;
+  display: flex;
+  align-items: center;
+  height: 5.5vw;
+  position: relative;
+}
+
+#navbar::before {
+  content: "";
+  background-color: #2b2974;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 97%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Navigation bar: List Styling */
+#navbar ul {
+  display: flex;
+  font-family: "Bree Serif", serif;
+  font-style: normal;
+}
+
+#navbar ul li {
+  font-family: "Bree Serif", serif;
+  font-size: 1.4rem;
+  list-style: none;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 0.6vw 2.3vw;
+  border-radius: 0.781vw;
+  color: wheat;
+  text-decoration: none;
+  font-family: "Bree Serif", serif;
+}
+
+#navbar ul li a:hover {
+  /* color: rgb(218, 124, 124); */
+  color: black;
+  background-color: blueviolet;
+}
+
+.logo {
+  background-image: url(../img/logo.png);
+  background-size: cover;
+  background-position: center;
+  height: 5.5vw;
+  width: 10%;
+}
+
+.nav2-searchBar {
+  color: white;
+  display: flex;
+  position: relative;
+  left: 3vw;
+}
+.nav2-searchBar input {
+  text-align: center;
+  margin-left: 3vw;
+  border-radius: 18px;
+  width: 25vw;
+  height: 2.8vw;
+  background-color: rgb(238, 217, 217);
+  font-size: 1.4vw;
+  position: relative;
+  right: 3.5vw;
+}
+.search-icon {
+  position: relative;
+  right: 5.5vw;
+  top: 0.7vw;
+  color: black;
+}
+.nav2-login a {
+  position: relative;
+  right: 3vw;
+  display: flex;
+  margin-left: 5vw;
+  color: white;
+}
+
+.nav2-login i {
+  font-size: 2vw;
+}
+
+
+/* main home section */
+#home::before {
+  content: "";
+  position: absolute;
+  height: 46.32vw;
+  background: url("../img/bg.jpg") no-repeat center center/cover;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.9;
+  animation: chngImg 15s linear  infinite;
+}
+@keyframes chngImg{
+  0%{
+    background: url("../img/bg.jpg") no-repeat center center/cover;
+  }
+  25%{
+    background: url("../img/bg3.jpg") no-repeat center center/cover;
+  }
+  75%{
+    background: url("../img/bg4.jpg") no-repeat center center/cover;
+  }
+  100%{
+    background: url("../img/bg5.jpg") no-repeat center center/cover;
+  }
+}
+.home-text p {
+  font-size: 6vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+.discover {
+  position: relative;
+  width: 50%;
+  left: 14vw;
+  top: 10vw;
+}
+.Xton {
+  position: relative;
+  width: 50%;
+  left: 14vw;
+  top: 10vw;
+}
+.home-text a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6vw;
+  position: relative;
+  left: 19vw;
+  top: 10vw;
+}
+.home-text a:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
+
+}
+.home-text i {
+  position: relative;
+  left: 19vw;
+  top: 10vw;
+}
+.arrow-right i {
+  font-size: 5.5vw;
+  color: black;
+  position: relative;
+  left: 92vw;
+  top: 2vw;
+  visibility: hidden;
+
+}
+.arrow-right i:hover {
+  color: rgb(63, 62, 62);
+}
+.arrow-left i {
+  font-size: 5.5vw;
+  color: black;
+  position: relative;
+  left: 0.5vw;
+  bottom: 2vw;
+  visibility: hidden;
+
+}
+.arrow-left i:hover {
+  color: rgb(63, 62, 62);
+}
+.arrivals {
+  height: 15vw;
+  background-color: rgb(101, 101, 245);
+  margin: 6vw;
+  position: relative;
+  bottom:3vw;
+  border-radius: 8px;
+}
+.arrivals-text {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Merriweather", serif;
+  color: white;
+  font-size: 1.8vw;
+}
+.date {
+  width: 27%;
+  height: 2.2vw;
+  background-color: rgb(238, 217, 217);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 1.5vw;
+  border-radius: 6px;
+}
+.date i {
+  position: relative;
+  left: 1vw;
+  top: 0.1vw;
+}
+.date input {
+  position: relative;
+  left: 5vw;
+  width: 8.5vw;
+  height: 1.8vw;
+}
+.arrival-input {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4vw;
+  font-size: 1.4vw;
+}
+.search-arrivals input {
+  text-align: center;
+  border-radius: 8px;
+  width: 22vw;
+  height: 2.2vw;
+  position: relative;
+  bottom: 0vw;
+  /* left: 0.2vw; */
+  background-color: rgb(238, 217, 217);
+  font-size: 1vw;
+}
+.search-icon2 {
+  position: relative;
+  bottom: 1.8vw;
+  left: 20vw;
+  width: 20%;
+}
+.view-arrivals {
+  font-size: 2.3vw;
+  text-decoration: none;
+  color: black;
+}
+.view-arrivals:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
+}
+
+.view-arrivals i {
+  position: relative;
+  top: 0.3vw;
+}
+
+/* home-2 */
+#home-2::before {
+  content: "";
+  position: absolute;
+  height: 54vw;
+  background: url("../img/bg2.jpeg") no-repeat center center/cover;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.9;
+}
+#home-2 {
+  height: 44vw;
+  margin-top: -10vw;
+}
+.home-2-op {
+  display: grid;
+  grid-template-columns: 35vw 35vw;
+  grid-template-rows: 12vw 12vw;
+  grid-gap: 5vw 10vw;
+  margin: 8vw;
+  position: relative;
+  top: 4vw;
+}
+.options {
+  background-color: yellow;
+  border-radius: 10px;
+}
+.target {
+  position: relative;
+  font-size: 2vw;
+  left: 6vw;
+  top: 2vw;
+}
+.target i {
+  color: red;
+}
+.target2 {
+  position: relative;
+  font-size: 1.1vw;
+  color: black;
+  left: 15vw;
+  top: 4vw;
+}
+.target2 a {
+  text-decoration: none;
+  color: black;
+}
+.target2 a:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
+}
+.services {
+  position: relative;
+  font-size: 2vw;
+  left: 8vw;
+  top: 2vw;
+}
+.services i {
+  color: red;
+}
+.services2 {
+  position: relative;
+  font-size: 1.1vw;
+  color: black;
+  left: 14vw;
+  top: 4vw;
+  width: 50%;
+}
+.services2 a {
+  text-decoration: none;
+  color: black;
+}
+.services2 a:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
+}
+.restaurant {
+  position: relative;
+  font-size: 2vw;
+  left: 6.7vw;
+  top: 2vw;
+}
+.restaurant i {
+  color: red;
+}
+.restaurant2 {
+  position: relative;
+  font-size: 1.1vw;
+  color: black;
+  left: 12vw;
+  top: 4vw;
+}
+.restaurant2 a {
+  text-decoration: none;
+  color: black;
+}
+.restaurant2 a:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
+}
+.shopping {
+  position: relative;
+  font-size: 2vw;
+  left: 7vw;
+  top: 2vw;
+}
+.shopping i {
+  color: red;
+}
+.shopping2 {
+  width: 50%;
+  position: relative;
+  font-size: 1.1vw;
+  color: black;
+  left: 15vw;
+  top: 4vw;
+}
+.shopping2 a {
+  text-decoration: none;
+  color: black;
+}
+.shopping2 a:hover {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
+}
+
+.expert {
+  display: inline-block;
+  border-radius: 20%;
+  font-size: 2vw;
+  background-color: rgb(233, 98, 98);
+  position: relative;
+  left: 72vw;
+  bottom: 5vw;
+  height: 5vw;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.expert:hover {
+  background-color: #d94d4d;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  background-color: #4f5ea3;
+  font-size: 1.4vw;
+}
+.footer-1st {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+.footer-logo {
+  background-image: url(../img/logo.png);
+  background-size: cover;
+  background-position: center;
+  height: 4vw;
+  width: 7%;
+}
+.title {
+  font-size: 1.3vw;
+  font-weight: bold;
+}
+.footer-2nd {
+  height: 7vw;
+  border-bottom: 2px solid red;
+}
+.footer2d-info {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px solid white;
+}
+.links {
+  display: flex;
+}
+.links i {
+  padding-left: 1vw;
+}
+.footer-last {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foot-link a{
+  text-decoration: none;
+  color: black;
+}
+.foot-link a:hover{
+  text-decoration: underline;
+  color:hsl(0, 0%, 15%);
+}
+@media only screen and (max-width: 999px) {
+  .nav2 {
+    height: 12vw;
+    font-size: 1.4vw;
+  }
+  .logo {
+    height: 12vw;
+    width: 10%;
+  }
+  .home-text {
+    position: relative;
+    top: 10vw;
+  }
+  .home-text i {
+    font-size: 1.4vw;
+  }
+  .arrow-right {
+    position: relative;
+    top: 4vw;
+  }
+  .arrow-left {
+    position: relative;
+    top: 4vw;
+  }
+  #home {
+    height: 69vw;
+  }
+  #home::before {
+    height: 69vw;
+  }
+  .arrivals {
+    position: relative;
+    top: 16vw;
+  }
+  #home-2 {
+    height: 60vw;
+  }
+  .home-2-op {
+    position: relative;
+    top: 13vw;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 15vw 15vw;
+    grid-gap: 8vw 10vw;
+  }
+  #home-2::before {
+    height: 66vw;
+  }
+  .expert {
+    bottom: 7 vw;
+    height: 4vw;
+    width: 26%;
+    font-size: 2vw;
+  }
+  footer {
+    height: 30vw;
+  }
+  .footer-1st {
+    height: 8vw;
+  }
+  .title {
+    font-size: 2vw;
+  }
+  .footer-logo {
+    height: 7vw;
+    width: 13%;
+  }
+  .footer-2nd {
+    height: 13vw;
+    font-size: 2.3vw;
+  }
+  .footer-last {
+    font-size: 2.1vw;
+  }
+}
+.drop-down{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 11vw;
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+  
+  
+}
+.drop-down-op{
+  /* border: 2px solid red; */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down li{
+  /* display: none; */
+  padding: 0.8vw;
+  font-size: 1.6vw;
+
+}
+.drop-down a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+.drop-down-flights{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 23vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+
+}
+.drop-down-flights-op{
+  /* border: 2px solid red;  */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down-flights li{
+  /* display: none; */
+  padding: 0.7vw;
+  font-size: 1.6vw;
+
+}
+.drop-down-flights a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down-flights a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+
+
+.drop-down-booking{
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  left: 33vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+
+}
+.drop-down-booking-op{
+  /* border: 2px solid red;  */
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 100%;
+  text-align: center;
+}
+.drop-down-booking li{
+  /* display: none; */
+  padding: 0.7vw;
+  font-size: 1.6vw;
+
+}
+.drop-down-booking a{
+  text-decoration: none;
+  color: white;
+}
+.drop-down-booking a:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+
+.drop-down-reward{
+  visibility: hidden;
+  position: absolute;
+  left: 52vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+  color: white;
+  font-style: italic;
+
+}
+.drop-down-reward-op{
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 110%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.drop-down-reward-op a{
+  text-decoration: none;
+  color: hsl(120, 100%, 65%)
+}
+.drop-down-reward-op a:hover{
+  color: hsl(120, 100%, 35%)
+}
+.drop-down-help{
+  visibility: hidden;
+  position: absolute;
+  left: 42vw;
+  /* background-color: #4f5ea3; */
+  list-style: none;
+  width: 12%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+  color: white;
+  font-style: italic;
+
+}
+.drop-down-help-op{
+  background-color: #4f5ea3;
+  margin: 30px;
+  width: 110%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.drop-down-help-op a{
+  text-decoration: none;
+  color: hsl(120, 100%, 65%)
+}
+.drop-down-help-op a:hover{
+  color: hsl(120, 100%, 35%)
+}
+.arrival-table{
+  visibility: hidden;
+  position: relative;
+  left: 53vw;
+  width: 40%;
+}
+#arrival{
+  cursor: pointer;
+}
+#arrival2:hover{
+cursor: pointer;
+color: black;
+/* border: 2px solid wheat;  */
+}
+#departure:hover{
+cursor: pointer;
+color: black;
+/* border: 2px solid wheat;  */
+}
