@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*...................Backgreound-Images.................*/
+.BackgroundImg {
+  position: absolute;
+  width: 100vw;
+  height: 46vw;
+  background-image: url(Images/Administration.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  opacity: 0.3;
+}
+/*...................Logo.................*/
+#logo {
+  margin-left: 2vw;
+  margin-top: 0.5vw;
+  width: 10vw;
+  height: 8.4vw;
+  background: url(Images/xton_logo.png);
+  border-radius: 2vw;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+/*...................Logout.................*/
+#Logout {
+  margin-top: -3.25vw;
+  margin-left: 5.3vw;
+  width: 2.75vw;
+  height: 2.25vw;
+  background: url(Images/logout.png);
+  border-radius: 2vw;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 4px rgb(39, 23, 23);
+}
+/*...................Buttons.................*/
+#Restaurants {
+  height: 2.55vw;
+  width: 10vw;
+  margin-left: 0.5vw;
+  background-color: FF7888;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.1vw;
+  border: none;
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+.Other_button1 {
+  margin-top: 1vw;
+  margin-left: 0.5vw;
+  height: 2.55vw;
+  width: 10vw;
+  background-color: FFD67C;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.1vw;
+  border: none;
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+.Other_button {
+  height: 2.55vw;
+  width: 10vw;
+  margin-left: 0.5vw;
+  background-color: FFD67C;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.05vw;
+  border: none;
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.Other_button:hover {
+  background-color: FF7888;
+}
+.Other_button1:hover {
+  background-color: FF7888;
+}
+/*...................Button Frame.................*/
+#button_f {
+  margin-top: 1.1vw;
+  margin-left: 1.5vw;
+  height: 35.2vw;
+  width: 11vw;
+  background-color: 524ECC;
+  border-radius: 2vw;
+}
+/*...................Outer Big Frame.................*/
+#outer_f {
+  margin-top: -44.5vw;
+  margin-left: 13.5vw;
+  height: 45vw;
+  width: 84.5vw;
+  background-color: 524ECC;
+  border-radius: 2vw;
+  flood-opacity: 0.4;
+}
+/*...................Search Bar.................*/
+#search {
+  margin-top: -43.7vw;
+  margin-left: 46vw;
+  height: 1.6vw;
+  width: 18vw;
+  background-color: rgb(223, 223, 223);
+  border-radius: 0.7vw;
+  font-weight: bold;
+  font-size: 1.1vw;
+  border: none;
+}
+#search_i {
+  margin-top: -43.4vw;
+  margin-left: 62.3vw;
+  height: 0.5vw;
+  width: 0.5vw;
+  font-size: 1.1vw;
+  color: #8a8a8a;
+  border: none;
+  cursor: pointer;
+  background: none;
+  background-size: cover;
+  background-position: center;
+}
+.datetime {
+  margin-top: -43.7vw;
+  margin-left: 66.5vw;
+  height: 2.8vw;
+  width: 12vw;
+  background-color: #ecb259;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  border-radius: 1vw;
+  font-weight: bold;
+}
+.date {
+  margin-left: 0vw;
+  margin-top: -0.3vw;
+  font-weight: 600;
+  font-size: 1.1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+}
+.time {
+  margin-left: 0vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+}
+/*...................Notification Bell.................*/
+#Notification {
+  margin-top: -43.6vw;
+  margin-left: 76vw;
+  height: 2vw;
+  width: 2vw;
+  background: url(Images/bell.png);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+}
+/*...................Admin Name.................*/
+#admin_Name {
+  margin-top: -43.3vw;
+  margin-left: 85vw;
+  height: 4vw;
+  width: 20vw;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.1vw;
+  background-size: cover;
+  background-position: center;
+}
+/*...................Admin Photo.................*/
+#admin_Photo {
+  margin-top: -4.9vw;
+  margin-left: 89vw;
+  height: 3vw;
+  width: 3vw;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+#admin_Photo img {
+  border-radius: 50%;
+}
+/*...................Frame Content Name.................*/
+#content_Name {
+  margin-top: -3vw;
+  margin-left: 18vw;
+  height: 9vw;
+  width: 9vw;
+  background-color: FF7888;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.5vw;
+  border: none;
+  border-radius: 1.5vw;
+  text-align: center;
+}
+
+/*...................Inner Frame.................*/
+#content_f {
+  margin-top: -7vw;
+  margin-left: 14.5vw;
+  height: 39.8vw;
+  width: 82.5vw;
+  background-color: FF7888;
+  border-radius: 2vw;
+}
+/*...................Delete Item From List...........*/
+.Contents {
+  margin-top: 1.8vw;
+  margin-left: 14.8vw;
+}
+.Contents #H {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(20, 49, 16);
+  font-size: 1.8vw;
+}
+
+.Contents #Contents1 {
+  margin-top: 0.5vw;
+  margin-left: 0.5vw;
+  height: 38.5vw;
+  width: 40vw;
+  background-color: rgb(239, 201, 253);
+  border-radius: 1vw;
+  box-shadow: 4px 4px 4px rgb(94, 84, 84);
+  text-align: center;
+}
+.Contents #Contents1 #Scrolable-Table {
+  margin-top: 0.5vw;
+  max-height: 23.25vw;
+  overflow-y: auto;
+  width: fit-content;
+}
+.Contents #Contents1 #Scrolable-Table #Table {
+  margin-left: 1vw;
+  width: 36.8vw;
+  height: 23.5vw;
+  background-color: rgb(240, 240, 240);
+  border: 2px solid black;
+  border-collapse: collapse;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1vw;
+  text-align: center;
+}
+.Contents #Contents1 #Scrolable-Table #TH {
+  background-color: rgb(229, 126, 255);
+  border: 2px solid black;
+  font-size: 1.5vw;
+  position: sticky;
+  top: -2;
+  padding: 6px 8px;
+}
+.Contents #Contents1 #Scrolable-Table #TD {
+  border: 2px solid black;
+  font-size: 1.1vw;
+  padding: 6px 8px;
+  font-size: 1.1vw;
+  font-weight: bold;
+}
+.Contents #Contents1 #Delete-Item {
+  margin-top: 0.75vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  height: 11.5vw;
+  background-color: rgb(129, 232, 250);
+  color: #2e2d2d;
+  border-radius: 0.7vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents1 #Delete-Item #ID {
+  margin-left: 0.3vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents1 #Delete-Item #Name {
+  margin-left: 0.3vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents1 #Delete-Item #Delete {
+  margin-top: 0.7vw;
+  margin-left: 0vw;
+  height: 1.8vw;
+  width: 5vw;
+  background-color: rgb(250, 112, 112);
+  color: #202020;
+  border-radius: 0.4vw;
+  font-weight: bold;
+  font-size: 1.1vw;
+  border: none;
+  box-shadow: 4px 4px 4px rgb(94, 84, 84);
+  cursor: pointer;
+}
+.Contents #Contents2 {
+  margin-top: -39vw;
+  margin-left: 41.3vw;
+  height: 19vw;
+  width: 40vw;
+  background-color: #ffc8b7;
+  border-radius: 1vw;
+  box-shadow: 4px 4px 4px rgb(94, 84, 84);
+  text-align: center;
+}
+.Contents #Contents2 #Add {
+  margin-top: 0.5vw;
+  margin-left: 0.5vw;
+  color: #2e2d2d;
+  border-radius: 0.7vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents2 #Add #star {
+  color: red;
+}
+.Contents #Contents2 #Insert {
+  margin-top: 0.7vw;
+  margin-left: 0vw;
+  height: 1.8vw;
+  width: 5vw;
+  background-color: rgb(66, 216, 61);
+  color: #202020;
+  border-radius: 0.4vw;
+  font-weight: bold;
+  font-size: 1.1vw;
+  border: none;
+  box-shadow: 4px 4px 4px rgb(94, 84, 84);
+  cursor: pointer;
+}
+.Contents .Contents2 {
+  margin-top: 0.3vw;
+  margin-left: 0.3vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents3 {
+  margin-top: 0.5vw;
+  margin-left: 41.3vw;
+  height: 19vw;
+  width: 40vw;
+  background-color: wheat;
+  border-radius: 1vw;
+  box-shadow: 4px 4px 4px rgb(94, 84, 84);
+  text-align: center;
+}
+.Contents #Contents3 #Update {
+  margin-top: 0.5vw;
+  margin-left: 0.5vw;
+  color: #2e2d2d;
+  border-radius: 0.7vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents3 #ID {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents3 #Name {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents3 #Label {
+  color: red;
+}
+.Contents #Contents3 #H3 {
+  margin-top: 0.7vw;
+}
+.Contents #Contents3 #Mobile {
+  margin-top: 0.7vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents3 #Address {
+  margin-top: 0.7vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents3 #Type {
+  margin-top: 0.7vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border: none;
+}
+.Contents #Contents3 #UpdateB {
+  margin-top: 1vw;
+  margin-left: 0vw;
+  height: 1.8vw;
+  width: 5.5vw;
+  background-color: rgb(109, 160, 255);
+  color: #202020;
+  border-radius: 0.4vw;
+  font-weight: bold;
+  font-size: 1.1vw;
+  border: none;
+  box-shadow: 4px 4px 4px rgb(94, 84, 84);
+  cursor: pointer;
+}

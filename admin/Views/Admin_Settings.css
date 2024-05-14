@@ -1,0 +1,476 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*...................Backgreound-Images.................*/
+.BackgroundImg {
+  position: absolute;
+  width: 100vw;
+  height: 46vw;
+  background-image: url(Images/Administration.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  opacity: 0.3;
+}
+/*...................Logo.................*/
+#logo {
+  margin-left: 2vw;
+  margin-top: 0.5vw;
+  width: 10vw;
+  height: 8.4vw;
+  background: url(Images/xton_logo.png);
+  border-radius: 2vw;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+/*...................Logout.................*/
+#Logout {
+  margin-top: -3.25vw;
+  margin-left: 5.3vw;
+  width: 2.75vw;
+  height: 2.25vw;
+  background: url(Images/logout.png);
+  border-radius: 2vw;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 4px rgb(39, 23, 23);
+}
+/*...................Buttons.................*/
+#Settings {
+  height: 2.55vw;
+  width: 10vw;
+  margin-left: 0.5vw;
+  background-color: FF7888;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.1vw;
+  border: none;
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+.Other_button1 {
+  margin-top: 1vw;
+  margin-left: 0.5vw;
+  height: 2.55vw;
+  width: 10vw;
+  background-color: FFD67C;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.1vw;
+  border: none;
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+.Other_button {
+  height: 2.55vw;
+  width: 10vw;
+  margin-left: 0.5vw;
+  background-color: FFD67C;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.05vw;
+  border: none;
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.Other_button:hover {
+  background-color: FF7888;
+}
+.Other_button1:hover {
+  background-color: FF7888;
+}
+/*...................Button Frame.................*/
+#button_f {
+  margin-top: 1.1vw;
+  margin-left: 1.5vw;
+  height: 35.2vw;
+  width: 11vw;
+  background-color: 524ECC;
+  border-radius: 2vw;
+}
+/*...................Outer Big Frame.................*/
+#outer_f {
+  margin-top: -44.5vw;
+  margin-left: 13.5vw;
+  height: 45vw;
+  width: 84.5vw;
+  background-color: 524ECC;
+  border-radius: 2vw;
+  flood-opacity: 0.4;
+}
+/*...................Search Bar.................*/
+#search {
+  margin-top: -43.7vw;
+  margin-left: 46vw;
+  height: 1.6vw;
+  width: 18vw;
+  background-color: rgb(223, 223, 223);
+  border-radius: 0.7vw;
+  font-weight: bold;
+  font-size: 1.1vw;
+  border: none;
+}
+#search_i {
+  margin-top: -43.4vw;
+  margin-left: 62.3vw;
+  height: 0.5vw;
+  width: 0.5vw;
+  font-size: 1.1vw;
+  color: #8a8a8a;
+  border: none;
+  cursor: pointer;
+  background: none;
+  background-size: cover;
+  background-position: center;
+}
+.datetime {
+  margin-top: -43.7vw;
+  margin-left: 66.5vw;
+  height: 2.8vw;
+  width: 12vw;
+  background-color: #ecb259;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  border-radius: 1vw;
+  font-weight: bold;
+}
+.date {
+  margin-left: 0vw;
+  margin-top: -0.3vw;
+  font-weight: 600;
+  font-size: 1.1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+}
+.time {
+  margin-left: 0vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+}
+/*...................Admin Name.................*/
+#admin_Name {
+  margin-top: -43.3vw;
+  margin-left: 85vw;
+  height: 4vw;
+  width: 20vw;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.1vw;
+  background-size: cover;
+  background-position: center;
+}
+/*...................Admin Photo.................*/
+#admin_Photo {
+  margin-top: -4.9vw;
+  margin-left: 89vw;
+  height: 3vw;
+  width: 3vw;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+#admin_Photo img {
+  border-radius: 50%;
+}
+/*...................Frame Content Name.................*/
+#content_Name {
+  margin-top: -3vw;
+  margin-left: 18vw;
+  height: 9vw;
+  width: 9vw;
+  background-color: FF7888;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.5vw;
+  border: none;
+  border-radius: 1.5vw;
+  text-align: center;
+}
+/*...................Inner Frame.................*/
+#content_f {
+  margin-top: -7vw;
+  margin-left: 14.5vw;
+  height: 39.8vw;
+  width: 82.5vw;
+  background-color: #ff7888;
+  border-radius: 2vw;
+}
+/*....................Form Items....................*/
+.Form1 {
+  margin-top: 2vw;
+  margin-left: 15.1vw;
+  height: 28vw;
+  width: 81.2vw;
+  border-radius: 2vw;
+  font-size: 1.5vw;
+}
+.Form1 .Profile_F {
+  margin-top: 1vw;
+  margin-left: 1.5vw;
+  height: 27vw;
+  width: 78vw;
+  color: rgb(0, 26, 255);
+  background-color: bisque;
+  font-size: 1.3vw;
+  box-shadow: 4px 4px 4px rgb(94, 84, 84);
+}
+.Form1 #Contents {
+  margin-top: -23vw;
+  margin-left: 10vw;
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: #0000ff;
+}
+.Form1 img {
+  border-radius: 50%;
+}
+/* .Form1 #Line {
+  margin-top: 0.5vw;
+  margin-left: 37.5vw;
+  width: 0.3vw;
+  height: 20vw;
+  background-color: #000000;
+  border-radius: 2vw;
+} */
+#Change_Info {
+  margin-top: -22vw;
+  margin-left: 53vw;
+  font-size: 1.8vw;
+  font-weight: bold;
+  color: rgb(99, 15, 22);
+}
+.Form1 #Update #label1 {
+  margin-top: 1vw;
+  margin-left: 45vw;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+.Form1 #Update #label2 {
+  margin-top: 1vw;
+  margin-left: 45vw;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+.Form1 #Update #label3 {
+  margin-left: 45vw;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+.Form1 #Update #label4 {
+  margin-left: 45vw;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+.Form1 #Update #label5 {
+  margin-left: 45vw;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+.Form1 #Update #label6 {
+  margin-left: 45vw;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+.Form1 #Update #label7 {
+  margin-left: 45vw;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+
+.Form1 #Update #Name {
+  margin-top: -1.5vw;
+  margin-left: 51vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+.Form1 #Update #Password {
+  margin-top: -1.5vw;
+  margin-left: 51vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+.Form1 #Update #Address {
+  margin-top: -1.5vw;
+  margin-left: 51vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+.Form1 #Update #Mobile {
+  margin-top: -1.5vw;
+  margin-left: 51vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+.Form1 #Update #Email {
+  margin-top: -1.5vw;
+  margin-left: 51vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+.Form1 #Update #Image {
+  margin-top: -1.5vw;
+  margin-left: 51vw;
+  width: 18vw;
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+.Form1 #Update #Salary {
+  margin-top: -1.5vw;
+  margin-left: 51vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+.Form1 #Update #UpdateB {
+  margin-top: 1.2vw;
+  margin-left: 55vw;
+  height: 1.8vw;
+  width: 5.5vw;
+  background-color: rgb(109, 160, 255);
+  color: #202020;
+  border-radius: 0.4vw;
+  font-weight: bold;
+  font-size: 1.1vw;
+  border: none;
+  box-shadow: 4px 4px 4px rgb(94, 84, 84);
+  cursor: pointer;
+}
+
+.Form2 {
+  margin-left: 15.1vw;
+  height: 10vw;
+  width: 81.2vw;
+  border-radius: 2vw;
+  font-size: 2vw;
+}
+
+.Form2 #Options_F {
+  margin-left: 1.5vw;
+  height: 10vw;
+  width: 78vw;
+  color: rgb(0, 26, 255);
+  background-color: rgb(205, 226, 250);
+  font-size: 1.3vw;
+  box-shadow: 4px 4px 4px rgb(94, 84, 84);
+}
+.Form2 #Options_F #Name {
+  margin-top: 0.8vw;
+  margin-left: 2vw;
+}
+.Form2 #Notification {
+  margin-top: 0.4vw;
+  margin-left: 1vw;
+  height: 2.7vw;
+  width: 76vw;
+  color: black;
+  background-color: rgb(201, 136, 195);
+  font-size: 1.5vw;
+  border-radius: 2vw;
+  font-weight: bold;
+}
+.Form2 #DarkMode {
+  margin-left: 1vw;
+  height: 2.7vw;
+  width: 76vw;
+  color: black;
+  background-color: rgb(201, 136, 195);
+  font-size: 1.5vw;
+  border-radius: 2vw;
+  font-weight: bold;
+}
+.Form2 #toggle-btn-1 {
+  display: none;
+}
+.Form2 #toggle-btn-1L {
+  position: relative;
+  margin-top: -1.25vw;
+  margin-left: 70vw;
+  display: block;
+  height: 1.8vw;
+  width: 3.7vw;
+  background: aqua;
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: background 0.5s linear;
+}
+.Form2 #toggle-btn-1L:before {
+  margin-top: 0.15vw;
+  margin-left: 1.75vw;
+  position: absolute;
+  content: "";
+  display: block;
+  height: 1.5vw;
+  width: 1.8vw;
+  background: rgb(31, 30, 30);
+  border-radius: 2vw;
+  transition: 0.5s;
+}
+.Form2 #toggle-btn-1:checked + #toggle-btn-1L {
+  background: #dbdada;
+}
+.Form2 #toggle-btn-1:checked + #toggle-btn-1L::before {
+  margin-left: 0.15vw;
+}
+.Form2 #toggle-btn-2 {
+  display: none;
+}
+.Form2 #toggle-btn-2L {
+  margin-top: -1.25vw;
+  margin-left: 70vw;
+  display: block;
+  height: 1.8vw;
+  width: 3.7vw;
+  background: #dfdddd;
+  border-radius: 2vw;
+  cursor: pointer;
+}
+.Form2 #toggle-btn-2L:before {
+  margin-top: 0.15vw;
+  margin-left: 0.15vw;
+  position: absolute;
+  content: "";
+  display: block;
+  height: 1.5vw;
+  width: 1.8vw;
+  background: rgb(31, 30, 30);
+  border-radius: 2vw;
+  transition: 0.5s;
+}
+.Form2 #toggle-btn-2:checked + #toggle-btn-2L {
+  background: aqua;
+}
+.Form2 #toggle-btn-2:checked + #toggle-btn-2L::before {
+  margin-left: 1.75vw;
+}
