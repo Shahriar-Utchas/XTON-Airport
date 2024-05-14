@@ -225,32 +225,32 @@ if(empty($_SESSION['admin'])){
               <script>
 const testimonials = [
     {
-      name: "<?php echo "Eva Sawyer" ?>",
+      name: "Eva Sawyer",
       Ratings: "5",
-      image: "Images/Admin.jpg",
+      image: "Images/1.jpeg",
       testimonial:
         " Very Good Experience.Thank you.",
     },
     {
       name: "Katey Topaz",
       Ratings: "2",
-      image: "Images/Admin.jpg",
+      image: "Images/2.jpeg",
       testimonial:
-        " sit amet nullaejhl eifh;KUHEFLKJhliuehf LUHEFIuhefi oEHFYO 8YEOF8Yoeho8YE FOeyfo8YEOF EYF",
+        "Very Disappointed. Not satisfied with the service",
     },
     {
       name: "Jae Robin",
       Ratings: "3",
-      image: "Images/Admin.jpg",
+      image: "Images/3.jpeg",
       testimonial:
-        " sit amet nullaejhl eifh;KUHEFLKJhliuehf LUHEFIuhefi oEHFYO 8YEOF8Yoeho8YE FOeyfo8YEOF EYF",
+        "Average experience, could be better.",
     },
     {
-      name: "Nicola Blakely",
+      name: "Nicol Blakely",
       Ratings: "4",
-      image: "Images/Admin.jpg",
+      image: "Images/4.jpeg",
       testimonial:
-        " sit amet nullaejhl eifh;KUHEFLKJhliuehf LUHEFIuhefi oEHFYO 8YEOF8Yoeho8YE FOeyfo8YEOF EYF",
+        "Good, but room for improvement.",
     },
   ];
   

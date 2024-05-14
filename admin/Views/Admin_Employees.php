@@ -186,15 +186,15 @@ if(empty($_SESSION['admin'])){
                         <h2 id="H">Insert New Employee</h2>
                         '*' Symbol included box should be filled to complete insertion.
                         <form method="post" enctype="multipart/form-data" action="../Controllers/Admin_Insrt_Emp.php">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID:<input type="number" class="Contents2" id="Id" name="Id"><lebel id="star">*</lebel><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;Name:<input type="text" class="Contents2" id="Name" name="Name"><lebel id="star">*</lebel><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID:<input type="number" class="Contents2" id="Id" name="Id"><lebel id="star">*</lebel><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: <input type="text" id="Name" name="Name"><lebel id="star">*</lebel><br>
                             &nbsp;&nbsp;Password:<input type="password" class="Contents2" id="Password" name="Password"><lebel id="star">*</lebel><br>
-                            &nbsp;&nbsp;Mobile:<input type="number" class="Contents2" id="Mobile" name="Mobile"><lebel id="star">*</lebel><br>
-                            &nbsp;&nbsp;Email:<input type="email" class="Contents2" id="Email" name="Email"><br>
-                            Address:<input type="text" class="Contents2" id="Address" name="Address"><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image:<input type="file" class="Contents2" id="Image" name="Image"><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobile:<input type="number" class="Contents2" id="Mobile" name="Mobile"><lebel id="star">*</lebel><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:<input type="email" class="Contents2" id="Email" name="Email"><br>
+                            &nbsp;&nbsp;&nbsp;Address:<input type="text" class="Contents2" id="Address" name="Address"><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image:<input type="file" class="Contents2" id="Image" name="Image"><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salary:<input type="float" class="Contents2" id="Salary" name="Salary"><br>
-                            &nbsp;&nbsp; Role:<input type="text" class="Contents2" id="Role" name="Role"><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Role:<input type="text" class="Contents2" id="Role" name="Role"><br>
                             &nbsp;&nbsp; Ratings:<input type="number" class="Contents2" id="Ratings" name="Ratings"><br>
                             Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" class="Radio" id="Gender" name="Gender" value="Male">Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <input type="radio" class="Radio" id="Gender" name="Gender" value="Female">Female<br>

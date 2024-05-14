@@ -28,7 +28,16 @@
       // }
    }
    else{
-      header("location:../Views/LoginRegistration.php");
-      $_SESSION['mess']="Your ID & Pass is invalid";
+      if($user=="parking" && $password=="parking"){
+         header("location:../parking/VIEWS/requestinformation.php");
+      }
+      else if($user=="lounge" && $password=="lounge"){
+         header("location:../parking/VIEWS/loungerequestinformation.php");
+      }
+      else{
+
+         header("location:../Views/LoginRegistration.php");
+         $_SESSION['mess']="Your ID & Pass is invalid";
+      }
    }
 ?>

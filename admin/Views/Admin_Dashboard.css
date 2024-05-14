@@ -175,7 +175,7 @@
 /*...................Admin Name.................*/
 #admin_Name {
   margin-top: -43.3vw;
-  margin-left: 80vw;
+  margin-left: 85vw;
   height: 4vw;
   width: 8vw;
   color: rgb(255, 255, 255);
@@ -292,7 +292,7 @@ button#prev {
   width: 22.75vw;
   color: #b2fdf3;
   text-align: center;
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   font-weight: bold;
   line-height: 2em;
   letter-spacing: 0.05em;

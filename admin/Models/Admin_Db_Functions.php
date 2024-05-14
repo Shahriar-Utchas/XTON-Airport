@@ -693,6 +693,13 @@ function Unseen_to_Seen()
     $con2=conn();
 	mysqli_query($con2,$sql2);	
 }
+function Admin_Review_Comment()
+{
+	$sql2 = "select Pass_Name, Pass_Review, Pass_Image, Pass_Comment FROM passenger_rating_comment";
+	$con2=conn();
+	$result=mysqli_query($con2,$sql2);	
+	return $result;
+}
 
 
 ?>

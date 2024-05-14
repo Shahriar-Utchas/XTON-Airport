@@ -40,7 +40,7 @@
       </div>
       <div class="remember-forgot" style="display: none;">  <label><input type="checkbox">Remember Me</label>
     </div>
-    <button id="forgetBtn">Forget your password?</button>
+    <!-- <button id="forgetBtn">Forget your password?</button> -->
       <button class="btn" name="log">LogIn</button>
     </form>
     <div class="register-link">

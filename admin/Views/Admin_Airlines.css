@@ -168,7 +168,7 @@
 /*...................Admin Name.................*/
 #admin_Name {
   margin-top: -43.3vw;
-  margin-left: 80vw;
+  margin-left: 85vw;
   height: 4vw;
   width: 20vw;
   color: rgb(255, 255, 255);
@@ -243,27 +243,26 @@
 }
 .Contents #Contents1 #Scrolable-Table #Table {
   margin-top: -1.3vw;
-  margin-left: 1vw;
-  width: 36.8vw;
+  margin-left: vw;
+  width: 35vw;
   height: 23.5vw;
   background-color: rgb(240, 240, 240);
   border: o.3vw solid black;
   border-collapse: collapse;
   font-family: "Times New Roman", Times, serif;
-  font-size: 1.1vw;
+  font-size: 1vw;
   text-align: center;
 }
 .Contents #Contents1 #Scrolable-Table #TH {
   background-color: #faadf0;
   border: 0.3vw solid black;
-  font-size: 1.2vw;
+  font-size: 1.17vw;
   position: sticky;
   top: -2;
 }
 .Contents #Contents1 #Scrolable-Table #TD {
   border: 0.3vw solid black;
-  font-size: 1.1vw;
-  font-weight: bold;
+  font-size: 1vw;
 }
 .Contents #Contents1 #Delete-Item {
   margin-top: 0.75vw;

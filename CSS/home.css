@@ -712,4 +712,13 @@ footer {
 #arrival{
   cursor: pointer;
 }
-
+#arrival2:hover{
+cursor: pointer;
+color: black;
+/* border: 2px solid wheat;  */
+}
+#departure:hover{
+cursor: pointer;
+color: black;
+/* border: 2px solid wheat;  */
+}

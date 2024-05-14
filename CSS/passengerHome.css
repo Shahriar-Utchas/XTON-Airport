@@ -18,7 +18,7 @@
 }
 .navbar {
   /* background: linear-gradient(180deg, hsl(270, 80%, 50%), hsl(210, 100%, 75%)); */
-  background-color: hsl(271, 79%, 49%);
+  background-color: hsl(246, 68%, 56%);
   height: 7vw;
   border-radius: 0px 35px 0px 0px;
   border-bottom: 4px solid white;
@@ -28,11 +28,12 @@
   border-radius: 0px 0px 35px 0px;
   /* background: linear-gradient(180deg, hsl(207, 80%, 50%), hsl(210, 100%, 75%)); */
   background-color: hsl(271, 79%, 69%);
+  /* background-color: rgb(212, 85, 76); */
 }
 .home h1 {
   font-size: 3vw;
   font-weight: bold;
-  color: white;
+  color: black;
   text-align: center;
   margin-top: 1vw;
 }
