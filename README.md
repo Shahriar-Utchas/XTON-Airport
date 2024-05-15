@@ -3,7 +3,7 @@ This is an airport management system web-based project using HTML, CSS, JavaScri
 # Demo:
 ## Home page: 
 ![1](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/bf8fc628-3260-4f4c-92bb-09fabbab731d)
-## Restaurants page:
+## Restaurant page:
 ![7](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/a8eec7e6-7e53-43bc-960b-433361ba991b)
 ## Shopping page: 
 ![8](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/43dfaaaa-1020-4b07-9871-c70e7a8f970d)
