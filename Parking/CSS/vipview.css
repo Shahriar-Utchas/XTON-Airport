@@ -1,0 +1,27 @@
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 50px auto;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+
+h1
+{
+    text-align: center;
+}
+
+.backbutton
+{
+   position:absolute;
+   left:700px;
+   
+
+}
