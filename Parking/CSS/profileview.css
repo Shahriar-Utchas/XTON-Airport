@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your background image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+.container {
+    max-width: 80vw; /* Use viewport width */
+    margin: 5vh auto; /* Use viewport height */
+    padding: 2vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5vw; /* Use viewport width */
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.1); /* Use viewport width */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    color: #555;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4vh; /* Use viewport height */
+    border: 0.1vw solid #ccc; /* Use viewport width */
+    padding: 1vh; /* Use viewport height */
+    border-radius: 2.5vw; /* Use viewport width */
+    background-color: #fff;
+}
+
+.profile img {
+    width: 13vw; /* Use viewport width */
+    height: 13vw; /* Use viewport width */
+    margin-right: 4vw; /* Use viewport width */
+    border-radius: 50%;
+}
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.profile-details h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.profile-details p {
+    margin: 1vh 0; /* Use viewport height */
+    color: #666;
+}
