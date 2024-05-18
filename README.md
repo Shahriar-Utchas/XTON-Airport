@@ -2,7 +2,7 @@
 This is an airport management system web-based project using HTML, CSS, JavaScript, PHP, and MySQL
 # Demo:
 ## Home page: 
-![1](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/bf8fc628-3260-4f4c-92bb-09fabbab731d)
+![1](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/b6f67881-ff0a-441e-859b-e9fd69c0491c)
 ## Restaurant page:
 ![7](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/a8eec7e6-7e53-43bc-960b-433361ba991b)
 ## Shopping page: 
@@ -18,10 +18,10 @@ This is an airport management system web-based project using HTML, CSS, JavaScri
 ## Passenger Profile update page:
 ![6](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/ebe8b7eb-f756-452b-a3f6-f6a29358ead4)
 ## Admin dashboard page(after login):
-![9](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/0853ef2d-cb7f-4655-b2cf-70b28335ab40)
+![9](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/d26d3edc-cb6d-4f64-9703-f1f57aa1f41e)
 ## Admin passenger dashboard:
-![10](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/20a91dfe-7321-430e-afd7-a72b524d625f)
+![10](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/3c082679-b778-44a8-81bd-c69295411b6a)
 ## Admin restaurant dashboard:
-![11](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/ea55196d-5315-48ab-9b30-08ea7f5dc710)
+![11](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/f63c634f-1b22-4cfe-9032-2ecdf05f0371)
 ## Admin settings page: 
-![12](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/7a08219a-f20d-4b1f-b156-2e6de2abb63b)
+![12](https://github.com/Shahriar-Utchas/XTON-Airport/assets/123489314/75772a17-8caa-44ff-b5e8-bbb379590413)
