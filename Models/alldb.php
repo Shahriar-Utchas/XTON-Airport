@@ -248,6 +248,18 @@
         $res= mysqli_query($con,$sql);
         return $res;
     }
+    function remove_all_cart($user){
+        $sql="DELETE FROM `cart_items` WHERE user_name='$user'";
+        $con=conn();
+        $res= mysqli_query($con,$sql);
+        return $res;
+    }
+    function remove_all_cart_shopping($user){
+        $sql="DELETE FROM `shopping_cart` WHERE user='$user'";
+        $con=conn();
+        $res= mysqli_query($con,$sql);
+        return $res;
+    }
     
     
 ?>

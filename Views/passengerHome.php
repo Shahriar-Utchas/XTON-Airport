@@ -166,12 +166,7 @@ $buy_shop_info = get_shop_buy_info($_SESSION['user']);
     <script>
 
         function logout() {
-            swal({
-                    title: "Are you sure you want to logout?",
-                    icon: "warning",
-                    buttons: ["Cancel", "Logout"],
-                    dangerMode: true,
-                }).then((logout) => {
+
                     if (logout) {
                         // Make an AJAX request to logout.php
                         var xhr = new XMLHttpRequest();
@@ -185,7 +180,7 @@ $buy_shop_info = get_shop_buy_info($_SESSION['user']);
                         };
                         xhr.send();
                     }
-                });
+               
         }
     </script>
     <script>
