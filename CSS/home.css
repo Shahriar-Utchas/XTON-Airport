@@ -5,7 +5,7 @@
 }
 
 #navbar {
-  background-color: #2b2974;
+  background-color: rgb(51, 51, 145);
   display: flex;
   align-items: center;
   height: 5.5vw;
@@ -181,8 +181,12 @@
   color: rgb(63, 62, 62);
 }
 .arrivals {
-  height: 15vw;
-  background-color: rgb(101, 101, 245);
+  height: 18vw;
+  /* background-color: hsl(240, 88%, 70%); */
+  /* background:blur(10px); */
+  /* border: 4px solid blue; */
+  /* background-color: #c9aad9; */
+  background-color: hsl(240, 57%, 59%);
   margin: 6vw;
   position: relative;
   bottom:3vw;
@@ -192,7 +196,7 @@
   display: flex;
   justify-content: space-evenly;
   font-family: "Merriweather", serif;
-  color: white;
+  color: wheat;
   font-size: 1.8vw;
 }
 .date {
@@ -278,7 +282,10 @@
   top: 4vw;
 }
 .options {
-  background-color: yellow;
+  background-color: rgb(222, 222, 75);
+  /* background-color: hsl(218, 59%, 53%); */
+  /* background-color: #deadf8; */
+  backdrop-filter: blur(10px);
   border-radius: 10px;
 }
 .target {
@@ -401,7 +408,9 @@
 
 /* footer */
 footer {
-  background-color: #4f5ea3;
+  /* background-color: #4f5ea3; */
+  /* background-color: hsl(266, 47%, 52%); */
+  background-color: rgb(95, 95, 204);
   font-size: 1.4vw;
 }
 .footer-1st {
@@ -705,9 +714,16 @@ footer {
 }
 .arrival-table{
   visibility: hidden;
-  position: relative;
-  left: 53vw;
-  width: 40%;
+   position: relative;
+  /* border-collapse: collapse;
+  left: 53vw;*/
+  width: 40%; 
+  border-collapse: collapse;
+  margin-top: 1vw;
+  bottom: 1.3vw;
+  left: 28vw;
+  max-height:7vw ;
+  overflow: auto;
 }
 #arrival{
   cursor: pointer;
@@ -721,4 +737,32 @@ color: black;
 cursor: pointer;
 color: black;
 /* border: 2px solid wheat;  */
+}
+#arri{
+  color: white;
+}
+#dep{
+  color: white;
+}
+#arri:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+}
+#dep:hover{
+  text-decoration: underline;
+  color: rgb(167, 204, 239);
+  cursor: pointer;
+}
+#time{
+  position: relative;
+  left: 1vw;
+}
+#temp{
+  position: relative;
+  left: 1.5vw;
+}
+.tempi{
+  position: relative;
+  left: 1.5vw;
 }
