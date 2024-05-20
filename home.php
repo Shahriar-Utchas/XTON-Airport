@@ -47,15 +47,15 @@ session_start();
       </ul>
       <ul class="drop-down-flights">
           <div class="drop-down-flights-op">
-                  <li><a href="#">Arrivals</a></li>
-                  <li><a href="#">Departures</a></li>
-                  <li><a href="#">Cancel Flights</a></li>
+                  <li id = "arri">Arrivals</li>
+                  <li id = "dep">Departures</li>
+                  <!-- <li><a href="#">Cancel Flights</a></li> -->
           </div> 
       </ul>
       <ul class="drop-down-booking">
           <div class="drop-down-booking-op">
-              <li><a href="#">Parking</a></li>
-              <li><a href="#">Lounge</a></li>
+              <li><a href="#parking">Parking</a></li>
+              <li><a href="#lounge">Lounge</a></li>
           </div>
       </ul>
       <ul class="drop-down-reward">
@@ -92,8 +92,8 @@ session_start();
           <p id = "arrival2">Arrivals</p>
           <p id = "departure">Departures</p>
           <p>
-            <span id = "loc">Dhaka, Bangladesh | </span><span id = "time">Time | </span><span id = "temp"> Temperature</span>
-            <i class="fa-solid fa-cloud-sun-rain"></i>
+            <span id = "loc">Dhaka, Bangladesh |  </span><span id = "time"></span><span id = "temp"></span>
+            <span class="tempi"><i class="fa-solid fa-cloud-sun-rain"></i></span>
           </p>
         </div>
         <!-- Arrival Inputs -->
@@ -110,7 +110,7 @@ session_start();
             </div>
           </div>
           <div class="view-arrivals">
-           <span id = "arrival"> View all Arrivals </span>
+           <span id = "arrival">View all Arrivals</span>
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
@@ -119,8 +119,7 @@ session_start();
             $result = getArrivals();
         ?>
         <div class="arrival-table">
-        <table border="1" style="background-color: #f2f2f2;">
-           <tr>
+        <table border="1">
                <th>Time</th>
                <th>Flight</th>
                <th>Arriving From</th>
@@ -148,7 +147,7 @@ session_start();
       <!-- Options Section -->
       <div class="home-2-op">
         <div class="options">
-          <div class="target">
+          <div class="target" id = "parking">
             <i class="fa-solid fa-bullseye"></i>
             Parking at Airport
           </div>
@@ -158,7 +157,7 @@ session_start();
           </div>
         </div>
         <div class="options">
-          <div class="services">
+          <div class="services" id = "lounge">
             <i class="fa-solid fa-hand-holding-heart"></i>
             Lounge at Airport
           </div>
@@ -249,7 +248,7 @@ session_start();
     hours = hours.toString().padStart(2, 0);
     const minutes = now.getMinutes().toString().padStart(2, 0);
     const seconds = now.getSeconds().toString().padStart(2, 0);
-    const timeString = ` ${hours}:${minutes}:${seconds} ${meridiem} |`;
+    const timeString = ` ${hours}:${minutes}:${seconds} ${meridiem} |  `;
     document.getElementById("time").textContent = timeString;
     }
   updateClock();
@@ -421,6 +420,22 @@ session_start();
       }
     });
     document.getElementById("departure").addEventListener("click", function(){
+      if(document.querySelector(".arrival-table").style.visibility === "hidden"){
+        document.querySelector(".arrival-table").style.visibility = "visible";
+      }
+      else {
+        document.querySelector(".arrival-table").style.visibility = "hidden";
+      }
+    });
+    document.getElementById("dep").addEventListener("click", function(){
+      if(document.querySelector(".arrival-table").style.visibility === "hidden"){
+        document.querySelector(".arrival-table").style.visibility = "visible";
+      }
+      else {
+        document.querySelector(".arrival-table").style.visibility = "hidden";
+      }
+    });
+    document.getElementById("arri").addEventListener("click", function(){
       if(document.querySelector(".arrival-table").style.visibility === "hidden"){
         document.querySelector(".arrival-table").style.visibility = "visible";
       }
